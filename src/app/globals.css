@@ -280,4 +280,137 @@
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--border);
   }
+
+  /* Hero banner */
+  .hero-banner-bg {
+    background: linear-gradient(
+      0deg,
+      #450a5b 0%,
+      rgba(47, 4, 63, 0.15) 100%
+    );
+  }
+
+  /* Light sweep inside majher gradient column only */
+  .hero-vline-sheen-middle::after {
+    content: "";
+    position: absolute;
+    left: -30%;
+    right: -30%;
+    top: -30%;
+    height: 45%;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(0, 174, 255, 0.08) 42%,
+      rgba(163, 48, 239, 0.12) 50%,
+      rgba(0, 174, 255, 0.08) 58%,
+      transparent 100%
+    );
+    animation: hero-middle-sheen 5s ease-in-out infinite;
+    animation-delay: 1.5s;
+    opacity: 0.85;
+  }
+
+  @keyframes hero-middle-sheen {
+    0% {
+      transform: translateY(-35%);
+      opacity: 0.35;
+    }
+    50% {
+      opacity: 0.95;
+    }
+    100% {
+      transform: translateY(320%);
+      opacity: 0.35;
+    }
+  }
+
+  /* Hero: single vertical stroke — static hairline + light running along the line */
+  .hero-vline-oneline {
+    pointer-events: none;
+    position: absolute;
+    width: 1px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.12);
+    z-index: 1;
+  }
+
+  .hero-vline-oneline::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 3px;
+    margin-left: -1.5px;
+    height: 18%;
+    top: 0;
+    border-radius: 9999px;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(200, 120, 255, 0.95) 35%,
+      rgba(0, 220, 255, 0.85) 55%,
+      rgba(200, 120, 255, 0.75) 75%,
+      transparent 100%
+    );
+    box-shadow:
+      0 0 10px rgba(181, 59, 226, 0.55),
+      0 0 18px rgba(0, 200, 255, 0.35);
+    animation: hero-line-along-stroke 4.2s ease-in-out infinite;
+  }
+
+  .hero-vline-oneline-delay-1::after {
+    animation-delay: 1.05s;
+  }
+
+  .hero-vline-oneline-delay-2::after {
+    animation-delay: 2.1s;
+  }
+
+  .hero-vline-oneline-delay-3::after {
+    animation-delay: 3.15s;
+  }
+
+  /* Hero: blue corner halo — candle-style breathe */
+  .hero-dashboard-halo {
+    background: linear-gradient(
+      315.92deg,
+      rgba(0, 42, 255, 0) 65.92%,
+      #00aeff 91.67%
+    );
+    backdrop-filter: blur(44px);
+    -webkit-backdrop-filter: blur(44px);
+    animation: hero-blue-breathe 5s ease-in-out infinite;
+    transform-origin: 0% 0%;
+  }
+
+  @keyframes hero-line-along-stroke {
+    0% {
+      transform: translateY(-120%);
+      opacity: 0.25;
+    }
+    15% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(620%);
+      opacity: 0.25;
+    }
+  }
+
+  @keyframes hero-blue-breathe {
+    0%,
+    100% {
+      opacity: 0.72;
+      filter: brightness(0.95);
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      filter: brightness(1.12);
+      transform: scale(1.012);
+    }
+  }
 }
