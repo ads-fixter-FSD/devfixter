@@ -105,6 +105,9 @@
     transform: translateY(-1px);
   }  
 
+  .ftext-color{
+    color: #9B9EA8;
+  }
 
 
   .btn-secondary-custom {
