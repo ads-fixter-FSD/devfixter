@@ -8,14 +8,16 @@ import { IoLogoInstagram } from "react-icons/io5";
 import { FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineBehance } from "react-icons/ai";
 import { FaDribbble } from "react-icons/fa6";
+import ContactCTA from "./ContactCTA";
 
 const Footer = () => {
   return (
-    <footer className="w-full pb-[36px]  bg-background">
+    <footer className="w-full pb-[36px] ">
+        <ContactCTA />
       {/* Outer Container (1280px) */}
       <div className="custom-container px-5 mx:px-0">
         {/* Inner Wrapper (Width: 1160px) */}
-        <div className="mx-auto flex flex-col lg:flex-row justify-between items-start gap-10 max-w-[1160px]">
+        <div className="flex flex-col lg:flex-row justify-between items-start gap-10 max-w-[1160px]">
           {/* Left Side (Width: 305px) */}
           <div className="w-full lg:w-[305px]  flex flex-col gap-[47px]">
             {/* Logo & Description */}
@@ -152,7 +154,7 @@ const Footer = () => {
               </div>
               <div>
                 <h4 className="title-s mb-4 text-foreground">Social Media</h4>
-                <div className="flex gap-4 text-muted">
+                <div className="flex gap-[10px] text-muted">
                   <span className="cursor-pointer hover:text-primary">
                    <FaFacebookF size={18} />
                   </span>
@@ -166,7 +168,7 @@ const Footer = () => {
                      <AiOutlineBehance size={25}/>
                   </span>
                   <span className="cursor-pointer hover:text-primary">
-                     <FaDribbble size={20}/>
+                     <FaDribbble size={18}/>
                   </span>
                 </div>
               </div>
