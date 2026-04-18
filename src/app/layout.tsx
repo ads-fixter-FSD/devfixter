@@ -27,7 +27,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navbar />
         {/* Added top padding to account for fixed navbar */}
-        <main className="">
+        <main className="flex-grow  pb-12  mx-auto w-full">
           {children}
         </main>
         <Footer />
