@@ -123,7 +123,9 @@ const SolveRealProblems = () => {
             development solutions.
           </motion.p>
         </div>
-        <SolveRealProblemCard></SolveRealProblemCard>
+        <div className="mt-11 md:mt-15">
+           <SolveRealProblemCard />
+        </div>
       </div>
     </section>
   );
