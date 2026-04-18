@@ -1,8 +1,9 @@
-import Badge from "@/components/shared/Badge";
+import KeyBenefits from "@/components/home/KeyBenefits";
 
 export default function Home() {
-  return <div>Home Page 
-
-    <Badge> Benefits</Badge>
-  </div>;
+  return (
+    <div className="bg-black pt-20">
+      <KeyBenefits />
+    </div>
+  );
 }
