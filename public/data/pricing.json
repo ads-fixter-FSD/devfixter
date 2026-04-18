@@ -1,0 +1,92 @@
+{
+  "pricing_plans": [
+    {
+      "id": "starter",
+      "name": "Starter Plan",
+      "description": "Perfect for individuals and small projects getting started.",
+      "monthly_price": 300,
+      "annual_price": 240,
+      "currency": "$",
+      "price_suffix": "/monthly",
+      "features": [
+        "1 Small Website / Landing Page",
+        "Responsive Design (Mobile Friendly)",
+        "Basic SEO Setup",
+        "1-3 Pages Development",
+        "7 Days Support"
+      ],
+      "button_text": "Start Now",
+      "button_variant": "primary",
+      "is_featured": false
+    },
+    {
+      "id": "pro",
+      "name": "Pro Plan",
+      "badge": "(Recommended)",
+      "description": "Ideal for growing businesses that need more flexibility.",
+      "monthly_price": 400,
+      "annual_price": 320,
+      "currency": "$",
+      "price_suffix": "/monthly",
+      "features": [
+        "Up to 5 Pages Website / Web App",
+        "Custom UI Integration",
+        "API Integration (Basic)",
+        "Dashboard / Admin Panel",
+        "14 Days Support"
+      ],
+      "button_text": "Start Now",
+      "button_variant": "white",
+      "is_featured": true
+    },
+    {
+      "id": "business",
+      "name": "Business Plan",
+      "description": "For advanced projects and scalable systems.",
+      "monthly_price": 600,
+      "annual_price": 480,
+      "currency": "$",
+      "price_suffix": "/monthly",
+      "features": [
+        "Full Custom Web Application",
+        "Unlimited Pages / Features",
+        "Advanced API Integration",
+        "Security Optimization",
+        "30 Days Support"
+      ],
+      "button_text": "Start Now",
+      "button_variant": "white",
+      "is_featured": false
+    }
+  ],
+  "comparison_table": {
+    "header_title": "Compare Our Pricing Plans",
+    "header_description": "Find the plan that fits your project's needs, whether you're just starting or scaling fast.",
+    "rows": [
+      {
+        "feature_name": "Best For",
+        "starter": "Small Projects",
+        "pro": "Growing Startups",
+        "enterprise": "Scalable Systems"
+      },
+      {
+        "feature_name": "Development Time",
+        "starter": "Fast",
+        "pro": "Standard",
+        "enterprise": "Customized"
+      },
+      {
+        "feature_name": "Support",
+        "starter": "7 Days",
+        "pro": "14 Days",
+        "enterprise": "30 Days"
+      },
+      {
+        "feature_name": "UI/UX",
+        "starter": "Standard",
+        "pro": "Custom",
+        "enterprise": "Premium"
+      }
+    ]
+  }
+}

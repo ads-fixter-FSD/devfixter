@@ -8,7 +8,7 @@ interface PrimaryButtonProps {
     onClick?: () => void;
     href?: string;
     type?: "button" | "submit" | "reset";
-    className?: string; // এখান থেকেই আমরা সাইজ কন্ট্রোল করবো
+    className?: string; 
     icon?: ComponentType<{ size?: number | string }>;
     disabled?: boolean;
 }
