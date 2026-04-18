@@ -23,10 +23,10 @@ export default function RootLayout({
       lang="en"
       className={`${interTight.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background-dark">
+      <body className="min-h-full flex flex-col">
         <Navbar />
         {/* Added top padding to account for fixed navbar */}
-        <main className="flex-grow pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <main className="">
           {children}
         </main>
       </body>
