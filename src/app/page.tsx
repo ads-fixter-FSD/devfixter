@@ -1,6 +1,7 @@
 import FAQSection from "@/components/home/FAQSection";
 import KeyBenefits from "@/components/home/KeyBenefits";
 import SolveRealProblems from "@/components/home/SolveRealProblems";
+import PricingSection from "@/components/home/pricing/Pricing";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <SolveRealProblems></SolveRealProblems>
       <KeyBenefits />
       <FAQSection />
+      <PricingSection/>
     </div>
   );
 }
