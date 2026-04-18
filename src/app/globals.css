@@ -203,42 +203,42 @@
 
 /* Tablet Down (Below 1024px) */
 @media (max-width: 1024px) {
-  h1 {
+  .title-xl {
     font-size: 48px;
   }
 
-  h2 {
+  .title-lg {
     font-size: 38px;
   }
 
-  h3 {
+  .title-md {
     font-size: 28px;
   }
 }
 
 /* Mobile Down (Below 768px) */
 @media (max-width: 768px) {
-  h1 {
+  .title-xl{
     font-size: 36px;
   }
 
-  h2 {
+  .title-lg {
     font-size: 28px;
   }
 
-  h3 {
+  .title-md {
     font-size: 24px;
   }
 
-  h4 {
+  .title-sm {
     font-size: 20px;
   }
 
-  h5 {
+  .title-s {
     font-size: 18px;
   }
 
-  p,
+
   .text-base {
     font-size: 14px;
   }
