@@ -1,0 +1,280 @@
+@import "tailwindcss";
+
+:root {
+  /* Colors */
+  --primary: #A930EF;
+  --background: #0E0E0F;
+  --foreground: #FFFFFF;
+  --muted: #6D7182;
+  --accent: #B5BDE2;
+  --card: #191C28;
+  --card-dark: #000311;
+  --border: #121522;
+
+  /* Gradients */
+  --gradient-accent: linear-gradient(90deg, #B5BDE2 0%, rgba(181, 189, 226, 0.55) 100%);
+  --gradient-overlay: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.39) 100%);
+
+  --btn-primary-bg: #B53BE2;
+  --btn-shadow-inset: inset 0px -4px 19px 0px #EAB1FF;
+  --btn-border-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.39) 100%);
+
+  /* Font */
+  --font-inter: "Inter Tight", sans-serif;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-card: var(--card);
+  --color-card-dark: var(--card-dark);
+  --color-border: var(--border);
+  --background-image-gradient-accent: var(--gradient-accent);
+  --background-image-gradient-overlay: var(--gradient-overlay);
+  --font-sans: var(--font-inter);
+}
+
+/* --- Base Styles (Default Desktop Sizes) --- */
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-inter);
+    -webkit-font-smoothing: antialiased;
+  }
+
+.title-xl {
+    font-size: 62px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+.title-lg {
+    font-size: 46px;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+.title-md {
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+.title-sm {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .title-s {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .text-base {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .text-sm {
+    font-size: 14px;
+  }
+
+  .btn-primary-custom {
+    background: var(--btn-primary-bg);
+    box-shadow: var(--btn-shadow-inset);
+    border: 1px solid;
+    border-image-source: var(--btn-border-gradient);
+    border-radius: 12px;
+    padding: 13px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 500;
+  }
+
+  .btn-primary-custom:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }  
+
+
+
+  .btn-secondary-custom {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    /* Background & Shadow */
+    background: #B53BE2;
+    box-shadow: 0px -4px 19px 0px #EAB1FF inset;
+
+    /* Border Fix: Gradient with Radius */
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background-image: linear-gradient(#B53BE2, #B53BE2),
+      linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.39) 100%);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+  }
+
+  .btn-secondary-custom:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0px -2px 15px 0px #EAB1FF inset;
+  }
+
+  .btn-secondary-custom:active {
+    transform: scale(0.98);
+  }
+
+
+  .btn-ghost-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #FFFFFF;
+    color: #0E0E0F;
+    border-radius: 12px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .btn-ghost-custom:hover {
+    background: #f5f5f5;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost-custom:active {
+    transform: scale(0.98);
+  }
+
+
+
+  .btn-glass-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #FFFFFF;
+    border-radius: 12px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-glass-custom:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-1px);
+  }
+
+  .btn-glass-custom:active {
+    transform: scale(0.98);
+  }
+
+
+  .custom-container{
+   max-width: 1280px;
+   margin: 0 auto;
+  }
+}
+
+/* --- Responsive Overrides (Max-Width / Desktop-First) --- */
+
+/* Tablet Down (Below 1024px) */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+}
+
+/* Mobile Down (Below 768px) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  p,
+  .text-base {
+    font-size: 14px;
+  }
+
+  .text-sm {
+    font-size: 12px;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* --- Utility Classes --- */
+@layer utilities {
+  .bg-gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  .bg-gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+
+  .text-gradient {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-glass {
+    background: rgba(25, 28, 40, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+  }
+}
