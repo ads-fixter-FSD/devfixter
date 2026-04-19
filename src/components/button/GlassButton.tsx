@@ -1,13 +1,13 @@
 "use client";
 
-import React, { ReactNode, ComponentType } from 'react';
+import React, { ReactNode } from 'react';
 
 interface GlassButtonProps {
     children: ReactNode;
     onClick?: () => void;
     type?: "button" | "submit" | "reset";
     className?: string;
-    icon?: ComponentType<{ size?: number | string }>;
+    icon?: React.ReactNode; 
     disabled?: boolean;
 }
 
@@ -16,7 +16,7 @@ const GlassButton: React.FC<GlassButtonProps> = ({
     onClick,
     type = "button",
     className = "",
-    icon: Icon,
+    icon,
     disabled = false,
 }) => {
     return (
@@ -24,15 +24,40 @@ const GlassButton: React.FC<GlassButtonProps> = ({
             type={type}
             onClick={onClick}
             disabled={disabled}
-            className={`btn-glass-custom ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`
+                flex items-center justify-center 
+                transition-all duration-300
+                whitespace-nowrap overflow-hidden
+                ${disabled ? 'opacity-50 cursor-not-allowed' : 'hover:bg-white/20 active:scale-95'}
+                ${className}
+            `}
             style={{
-                width: '163px',
+                width: '235px',
                 height: '49px',
+                gap: '10px',
+                borderRadius: '12px',
                 padding: '13px 16px',
+                background: '#FFFFFF14',
+                backdropFilter: 'blur(20px)',
+                WebkitBackdropFilter: 'blur(20px)', // Safari support
             }}
         >
-            {Icon && <Icon size={20} />}
-            {children}
+            {icon && (
+                <span 
+                    className="flex-shrink-0 flex items-center justify-center rounded-[4px]" 
+                    style={{ 
+                        background: '#B53BE2',
+                        width: '24px', 
+                        height: '24px' 
+                    }}
+                >
+                    {icon}
+                </span>
+            )}
+            
+            <span className="leading-none text-white font-medium">
+                {children}
+            </span>
         </button>
     );
 };
