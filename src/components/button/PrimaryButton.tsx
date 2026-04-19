@@ -23,7 +23,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
     disabled = false,
 }) => {
     
-    const commonClasses = `btn-primary-custom inline-flex items-center justify-center gap-[10px] w-[163px] h-[56px] ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
+    const commonClasses = `btn-primary-custom inline-flex items-center justify-center gap-[10px] px-[16px] h-[56px] ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
 
     if (href && !disabled) {
         return (
