@@ -8,6 +8,7 @@ import Hero from '@/components/shared/Hero'
 import Image from 'next/image'
 import React from 'react'
 import { FiArrowRight } from 'react-icons/fi'
+import HowWeBuild from './_component/HowWeBuild'
 
 export default function page() {
   return (
@@ -42,8 +43,9 @@ export default function page() {
 
 
 
-
+ 
     <OurStory></OurStory>
+    <HowWeBuild />
     <WhatWeDo></WhatWeDo>
     </div>
   )
