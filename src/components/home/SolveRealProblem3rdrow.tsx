@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import innerdiv from "../../../public/home/solveRealProblem/Innerbtn.png";
 
 import React from "react";
-import { AiIcon, AiInt, Quntam } from "../svg";
+import { AiIcon, AiInt, Quntam, SecureImage } from "../svg";
 import { AiOutlinePlus } from "react-icons/ai";
 import Image from "next/image";
 
@@ -338,16 +338,47 @@ const SolveRealProblem3rdrow = () => {
               <Image src={innerdiv} alt="icon" className="w-[12px] h-[12px]" />
             </div>
           </motion.div>
-              </div>
-              <div className="px-7.5">
-                  <p className="title-s mt-4 text-white ">Web App Development</p>
-              <p className="text-base text-[#82869A] mt-3">Interactive and user-friendly web applications for real-world use.</p>
-              </div>
+        </div>
+        <div className="px-7.5">
+          <p className="title-s mt-4 text-white ">Web App Development</p>
+          <p className="text-base text-[#82869A] mt-3">
+            Interactive and user-friendly web applications for real-world use.
+          </p>
+        </div>
       </div>
 
       {/* 2nd */}
-          <div>
-              ss
+      <div className="h-[367px] w-[414px] mt-5 bg-[#000311] border border-[#FFFFFF12] rounded-[30px] shadow-[inset_0px_34px_154px_0px_#FFFFFF12]">
+        <div className="px-7.5">
+          <p className="title-s mt-4 text-white ">
+            Secure Development Practices
+          </p>
+          <p className="text-base text-[#82869A] mt-3">
+            We follow best practices to ensure safe and reliable systems.
+          </p>
+        </div>
+
+        <div>
+          <div
+            className="flex items-center justify-center overflow-hidden backdrop-blur-[4px]"
+            style={{
+              width: "64.9px",
+              height: "64.9px",
+              borderRadius: "50%", // পারফেক্ট সার্কেলের জন্য
+              background: "rgba(181, 59, 226, 0.25)", // হালকা বেগুনি ব্যাকগ্রাউন্ড যা ছবির সাথে মিলবে
+              border: "1.32px ",
+              // বর্ডার ইমেজ সোর্স সরাসরি স্টাইলে এভাবে দিলে অনেক সময় সমস্যা করে, তাই বর্ডার কালার কন্ট্রোল করা হয়েছে
+              borderColor: "rgba(181, 59, 226, 0.2)",
+              boxShadow: `
+      0px 28.06px 21.05px -14.03px rgba(181, 59, 226, 0.2), 
+      inset 0px 0px 7.02px 0px rgba(248, 248, 248, 0.4)
+    `,
+            }}
+          >
+            {/* আপনার আইকনটি এখানে */}
+            <SecureImage className="w-[24px] h-[24px]" />
+          </div>
+        </div>
       </div>
     </div>
   );

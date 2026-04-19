@@ -37,4 +37,18 @@ export const Quntam = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 );
+export const SecureImage = (props: React.SVGProps<SVGSVGElement>) => (
+
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.80244 2.51665L22.4898 18.7843L15.7327 24.6693L1.04532 8.40165L7.80244 2.51665Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M25.5074 10.4022L16.1247 16.4999L20.1028 2.38039L25.5074 10.4022Z" fill="white"/>
+</svg>
+
+
+
+
+);
+
+
+
 
