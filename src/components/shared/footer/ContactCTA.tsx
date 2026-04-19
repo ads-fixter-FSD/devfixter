@@ -21,7 +21,7 @@ const ContactCTA = () => {
              rounded-full"
       />
 
-      <div className="custom-container relative z-10 px-4 flex flex-col items-center text-center">
+      <div className="custom-container  z-10 px-4 flex flex-col items-center text-center">
         {/* Badge */}
         <div className="mb-3">
           <Badge>Contact</Badge>

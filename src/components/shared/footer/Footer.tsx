@@ -12,8 +12,8 @@ import ContactCTA from "./ContactCTA";
 
 const Footer = () => {
   return (
-    <footer className="w-full pb-[36px] ">
-        <ContactCTA />
+    <footer className="w-full pb-[36px] bg-black ">
+      <ContactCTA />
       {/* Outer Container (1280px) */}
       <div className="custom-container px-5 mx:px-0">
         {/* Inner Wrapper (Width: 1160px) */}
@@ -156,19 +156,19 @@ const Footer = () => {
                 <h4 className="title-s mb-4 text-foreground">Social Media</h4>
                 <div className="flex gap-[10px] text-muted">
                   <span className="cursor-pointer hover:text-primary">
-                   <FaFacebookF size={18} />
+                    <FaFacebookF size={18} />
                   </span>
                   <span className="cursor-pointer hover:text-primary">
-                     <FaLinkedinIn size={20} />
+                    <FaLinkedinIn size={20} />
                   </span>
                   <span className="cursor-pointer hover:text-primary">
-                  <IoLogoInstagram size={18}/>
+                    <IoLogoInstagram size={18} />
                   </span>
                   <span className="cursor-pointer hover:text-primary">
-                     <AiOutlineBehance size={25}/>
+                    <AiOutlineBehance size={25} />
                   </span>
                   <span className="cursor-pointer hover:text-primary">
-                     <FaDribbble size={18}/>
+                    <FaDribbble size={18} />
                   </span>
                 </div>
               </div>
@@ -181,7 +181,8 @@ const Footer = () => {
           <p className="text-[#B5BDE2] text-sm pt-[12px]">
             © 2026 DevFixter. All rights reserved.
             <span className="text-foreground ml-1">
-              Design & Development <span className="text-[#B5BDE2]">by</span>  DevFixter
+              Design & Development <span className="text-[#B5BDE2]">by</span>{" "}
+              DevFixter
             </span>
           </p>
         </div>
