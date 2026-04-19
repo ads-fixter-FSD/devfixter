@@ -51,7 +51,6 @@ const Integrations = () => {
       {/* --- Icons Container --- */}
       <div className="relative w-full max-w-[1100px] h-[350px] mt-[40px]">
         
-        {/* Center Logo - শুধু এটি নড়বে */}
         <motion.div 
           animate={{ y: [0, -8, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
