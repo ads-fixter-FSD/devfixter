@@ -414,3 +414,15 @@
     }
   }
 }
+
+.my-box {
+  border: 1.5px solid;
+  border-image-source: linear-gradient(
+    158.39deg,
+    rgba(181, 59, 226, 0.1) 14.19%,
+    rgba(181, 59, 226, 0.000025) 50.59%,
+    rgba(181, 59, 226, 0.000025) 68.79%,
+    rgba(181, 59, 226, 0.025) 105.18%
+  );
+  border-image-slice: 1;
+}

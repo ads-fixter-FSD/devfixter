@@ -14,6 +14,7 @@ import alfonso from "../../../public/home/solveRealProblem/pointerwithname.png";
 import vendaike from "../../../public/home/solveRealProblem/blue.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import SolveRealProblem3rdrow from "./SolveRealProblem3rdrow";
 
 const SolveRealProblemCard = () => {
   return (
@@ -44,7 +45,6 @@ const SolveRealProblemCard = () => {
                 />
               </div>
 
-              {/* ২. আপনার দেওয়া অরিজিনাল কোড (এক বিন্দুও পরিবর্তন করা হয়নি) */}
               <div className="pt-[16px] px-[14px] bg-[#000311] rounded-[30px] shadow-[inset_0px_34px_154px_0px_#FFFFFF12] relative z-10">
                 <div className="relative">
                   <div className="w-[323px] h-[39px] rounded-[8px] bg-[#121B35] flex items-center px-[12px]">
@@ -899,7 +899,8 @@ const SolveRealProblemCard = () => {
         {/* last div
          */}
         <div>
-          <div className="h-[704px] max-w-[413px] p-[30px] bg-[#000311] border border-[#FFFFFF12] rounded-[30px] shadow-[inset_0px_34px_154px_0px_#FFFFFF12]"></div>
+          <SolveRealProblem3rdrow></SolveRealProblem3rdrow>
+ 
         </div>
       </div>
     </div>
