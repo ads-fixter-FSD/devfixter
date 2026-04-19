@@ -1,9 +1,10 @@
 "use client";
 import { useState, useEffect } from 'react';
-import gsap from 'gsap';
 import Badge from '../../shared/Badge';
 import PricingCard from './PricingCard';
 import PricingToggle from './PricingToggle';
+import {motion} from 'framer-motion'
+import { fadeUp } from '../../../../utils/animation';
 
 interface PricingPlan {
   id: string;
@@ -32,36 +33,40 @@ export default function PricingSection() {
       .catch(err => console.error("Error loading pricing data:", err));
   }, []);
 
-  useEffect(() => {
-    if (plans.length > 0) {
-      gsap.fromTo(".pricing-card",
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" }
-      );
-    }
-  }, [plans]);
+
 
   return (
     <section className="bg-black py-24 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
         {/* --- Header Section --- */}
-        <div className="text-center mb-16">
+        <motion.div
+        variants={fadeUp}
+        initial='hidden'
+        whileInView={'visible'}
+        custom={0.4}
+        viewport={{once:false}}
+        className="text-center mb-16">
           <Badge className="mb-6 mx-auto">Pricing Plans</Badge>
           <h2 className="text-white text-4xl md:text-5xl font-medium mb-6">
             Flexible Development Plans <br /> for Every Project
           </h2>
-          <p className="text-[#9B9EA8] text-base mb-10 max-w-3xl mx-auto text-center" style={{ lineHeight: "1.5" }}>
+          <p className="text-[#9B9EA8] text-base mb-10 max-w-[640px]  mx-auto text-center" style={{ lineHeight: "1.5" }}>
             Choose the right plan based on your needs — from simple websites to advanced web applications and scalable systems.
           </p>
           
           <div className="flex justify-center">
             <PricingToggle isAnnual={isAnnual} setIsAnnual={setIsAnnual} />
           </div>
-        </div>
+        </motion.div>
 
         {/* --- Main Container (Width: 1104px, Height: 524px) --- */}
-        <div
+        <motion.div
+        variants={fadeUp}
+        initial='hidden'
+        whileInView={'visible'}
+        custom={0.5}
+        viewport={{once:false}}
           className="w-full relative z-10 flex flex-col md:flex-row max-w-[1104px] mx-auto items-stretch"
           style={{
             minHeight: "524px",
@@ -105,7 +110,7 @@ export default function PricingSection() {
               )}
             </div>
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

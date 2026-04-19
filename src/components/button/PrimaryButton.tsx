@@ -1,6 +1,6 @@
 "use client";
 
-import React, { ReactNode, ComponentType } from 'react';
+import React, { ReactNode } from 'react';
 import Link from 'next/link';
 
 interface PrimaryButtonProps {
@@ -9,7 +9,7 @@ interface PrimaryButtonProps {
     href?: string;
     type?: "button" | "submit" | "reset";
     className?: string; 
-    icon?: ComponentType<{ size?: number | string }>;
+    icon?: ReactNode; 
     disabled?: boolean;
 }
 
@@ -19,17 +19,23 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
     href,
     type = "button",
     className = "",
-    icon: Icon,
+    icon,
     disabled = false,
 }) => {
     
-    const commonClasses = `btn-primary-custom inline-flex items-center justify-center gap-[10px] px-[16px] h-[56px] ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
+    const commonClasses = `btn-primary-custom inline-flex items-center justify-center gap-[10px] min-w-[163px] h-[56px] transition-all duration-300 ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
+
+    const content = (
+        <>
+            {children}
+            {icon && <span className="flex items-center">{icon}</span>}
+        </>
+    );
 
     if (href && !disabled) {
         return (
             <Link href={href} className={commonClasses}>
-                {children}
-                {Icon && <Icon size={20} />}
+                {content}
             </Link>
         );
     }
@@ -41,8 +47,7 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({
             disabled={disabled}
             className={commonClasses}
         >
-            {children}
-            {Icon && <Icon size={20} />}
+            {content}
         </button>
     );
 };
