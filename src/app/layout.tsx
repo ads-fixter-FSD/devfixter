@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/shared/footer/Footer";
 
 const interTight = Inter_Tight({
   variable: "--font-inter",
@@ -20,15 +21,17 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="en" 
+      suppressHydrationWarning
       className={`${interTight.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-background-dark">
+      <body className="min-h-full flex flex-col">
         <Navbar />
         {/* Added top padding to account for fixed navbar */}
-        <main className="flex-grow pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <main className="flex-grow  pb-12  mx-auto w-full">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
