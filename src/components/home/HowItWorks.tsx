@@ -65,7 +65,7 @@ const HowItWorks = () => {
           <Badge>
              How It Works
           </Badge>
-          <h2 className="title-xl text-white">Simple Steps to Get Started</h2>
+          <h2 className="title-lg text-white">Simple Steps to Get Started</h2>
           <p className="ftext-color">
             Start your development journey with a clear and streamlined process.
           </p>

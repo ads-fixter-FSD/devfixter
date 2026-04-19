@@ -55,7 +55,7 @@ const FAQSection = () => {
           className="flex flex-col items-center text-center gap-6 "
         >
           <Badge>FAQs</Badge>
-          <h2 className="title-xl">
+          <h2 className="title-lg">
             Everything You <br /> Need to Know
           </h2>
           <p className="body-m ">
