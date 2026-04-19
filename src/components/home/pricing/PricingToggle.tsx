@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useRef } from 'react';
-import gsap from 'gsap';
 import PrimaryButton from '../../button/PrimaryButton';
 
 interface PricingToggleProps {
@@ -11,14 +10,7 @@ interface PricingToggleProps {
 const PricingToggle = ({ isAnnual, setIsAnnual }: PricingToggleProps) => {
   const toggleRef = useRef(null);
 
-  useEffect(() => {
-    // GSAP Animation for smooth sliding
-    gsap.to(toggleRef.current, {
-      x: isAnnual ? "100%" : "0%",
-      duration: 0.4,
-      ease: "power2.inOut"
-    });
-  }, [isAnnual]);
+
 
   return (
     <div 

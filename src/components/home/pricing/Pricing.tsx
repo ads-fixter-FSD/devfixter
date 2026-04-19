@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect } from 'react';
-import gsap from 'gsap';
 import Badge from '../../shared/Badge';
 import PricingCard from './PricingCard';
 import PricingToggle from './PricingToggle';
@@ -32,14 +31,7 @@ export default function PricingSection() {
       .catch(err => console.error("Error loading pricing data:", err));
   }, []);
 
-  useEffect(() => {
-    if (plans.length > 0) {
-      gsap.fromTo(".pricing-card",
-        { y: 30, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" }
-      );
-    }
-  }, [plans]);
+
 
   return (
     <section className="bg-black py-24 px-4 overflow-hidden">
