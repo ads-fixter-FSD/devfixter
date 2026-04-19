@@ -1,3 +1,5 @@
+import OurStory from '@/components/about-us/OurStory'
+import WhatWeDo from '@/components/about-us/WhatWeDo'
 import GhostButton from '@/components/button/GhostButton'
 import GlassButton from '@/components/button/GlassButton'
 import PrimaryButton from '@/components/button/PrimaryButton'
@@ -36,6 +38,13 @@ export default function page() {
 </GlassButton>
 }
     />
+
+
+
+
+
+    <OurStory></OurStory>
+    <WhatWeDo></WhatWeDo>
     </div>
   )
 }
