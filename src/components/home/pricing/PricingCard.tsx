@@ -2,7 +2,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import PrimaryButton from '../../button/PrimaryButton';
+import GhostButton from '@/components/button/GhostButton';
 
 interface PricingCardProps {
   plan: any;
@@ -63,20 +63,29 @@ const PricingCard = ({ plan, isAnnual, index }: PricingCardProps) => {
         ))}
       </div>
 
-      {/* Button Section - Dynamic width applied here */}
-      <div className="mt-auto">
-        <PrimaryButton
-          className={`${buttonWidth} !shadow !rounded-xl !h-[48px] mx-auto sm:mx-0 ${
-            plan.button_variant === 'white' 
-            ? 'bg-white !text-black hover:bg-white/90' 
-            : plan.button_variant === 'secondary' 
-            ? 'bg-transparent border border-[#191C28] !text-white hover:bg-white/10' 
-            : ''
-          }`}
-        >
-          {plan.button_text}
-        </PrimaryButton>
-      </div>
+     {/* Button Section */}
+ <div className="mt-auto">
+  <GhostButton
+    onClick={() => console.log('Plan Selected:', plan.name)}
+    className={`
+      ${buttonWidth} 
+      !h-[48px] !rounded-xl mx-auto sm:mx-0 
+      flex items-center justify-center gap-2
+      transition-all duration-500 ease-in-out
+      !bg-white !text-black !border-none
+      
+      hover:!bg-[#B53BE2] 
+      hover:!text-white 
+      
+      ${index === 0 
+        ? "hover:md:!w-[328px] hover:!w-[270px]" 
+        : "hover:!w-[270px]"                      
+      }
+    `}
+  >
+    {plan.button_text}
+  </GhostButton>
+</div>
     </div>
   );
 };
