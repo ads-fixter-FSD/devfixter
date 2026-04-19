@@ -1,5 +1,6 @@
 "use client";
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import PrimaryButton from '../../button/PrimaryButton';
 
 interface PricingToggleProps {
@@ -8,10 +9,6 @@ interface PricingToggleProps {
 }
 
 const PricingToggle = ({ isAnnual, setIsAnnual }: PricingToggleProps) => {
-  const toggleRef = useRef(null);
-
-
-
   return (
     <div 
       className="relative flex items-center p-1 mx-auto cursor-pointer select-none z-10"
@@ -24,22 +21,23 @@ const PricingToggle = ({ isAnnual, setIsAnnual }: PricingToggleProps) => {
       }}
     >
       {/* Moving Background Slider */}
-      <div
-        ref={toggleRef}
-        className="absolute top-1 left-1 w-[calc(50%-4px)] h-[calc(100%-8px)] bg-[#B53BE2] rounded-[10px]"
-        style={{
-            // শ্যাডো শুধুমাত্র তখনই থাকবে যখন স্লাইডারটি সেখানে মুভ করবে
-            boxShadow: "0px 0px 20px rgba(181, 59, 226, 0.4)" 
+      <motion.div
+        initial={false}
+        animate={{
+          x: isAnnual ? 123 : 0,
+          boxShadow: "0px 0px 20px rgba(181, 59, 226, 0.4)" 
         }}
+        transition={{ type: "spring", stiffness: 500, damping: 40 }}
+        className="absolute top-1 left-1 w-[calc(50%-4px)] h-[calc(100%-8px)] bg-[#B53BE2] rounded-[10px]"
       />
 
       {/* Monthly Button */}
       <PrimaryButton
         onClick={() => setIsAnnual(false)}
-        className={`relative z-10 w-1/2 !bg-transparent !border-none !h-full text-[16px] font-medium leading-[1.4] transition-all duration-300 ${
+        className={`relative z-10 w-1/2 bg-transparent !border-none !h-full !min-w-0 text-[16px] font-medium leading-[1.4] transition-all duration-300  ${
           !isAnnual 
-          ? 'text-white drop-shadow-[0px_0px_10px_rgba(255,255,255,0.3)]' // Active shadow
-          : 'text-[#B5BDE2]/40 !shadow-none' // Inactive no shadow
+          ? 'text-white ' 
+          : 'text-[#B5BDE2]/40 shadow-none'
         }`}
       >
         Monthly
@@ -48,10 +46,10 @@ const PricingToggle = ({ isAnnual, setIsAnnual }: PricingToggleProps) => {
       {/* Annually Button */}
       <PrimaryButton
         onClick={() => setIsAnnual(true)}
-        className={`relative z-10 w-1/2 !bg-transparent !border-none !h-full text-[16px] font-medium leading-[1.4] transition-all duration-300 ${
+        className={`relative z-10 w-1/2 bg-transparent !border-none !h-full !min-w-0 text-[16px] font-medium leading-[1.4] transition-all duration-300  ${
           isAnnual 
-          ? 'text-white drop-shadow-[0px_0px_10px_rgba(255,255,255,0.3)]' // Active shadow
-          : 'text-[#B5BDE2]/40 !shadow-none' // Inactive no shadow
+          ? 'text-white' 
+          : 'text-[#B5BDE2]/40 shadow-none'
         }`}
       >
         Annually
