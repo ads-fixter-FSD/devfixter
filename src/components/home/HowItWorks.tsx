@@ -113,7 +113,7 @@ const HowItWorks = () => {
           variants={fadeUp}
           custom={0.5}
         >
-          <PrimaryButton href="/contact" icon={IoMdArrowForward}>
+          <PrimaryButton href="/contact" icon={<IoMdArrowForward />}>
             Contact now
           </PrimaryButton>
         </motion.div>
