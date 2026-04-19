@@ -23,11 +23,11 @@ const LineSheen = ({ delay = 0, height = 200 }: { delay?: number; height?: numbe
       delay: delay,
       ease: "linear",
     }}
-    className="absolute left-[-1px] w-[2px] z-10"
+    className="absolute left-[-1px] w-[1px] z-10"
     style={{
       height: `${height}px`,
       background: "linear-gradient(180deg, #27BBFF 0%, rgba(24, 112, 153, 0) 100%)",
-      boxShadow: "0px 0px 12px rgba(39, 187, 255, 0.5)",
+      boxShadow: "0px 0px 12px rgba(39, 50, 255, 0.3)",
     }}
   />
 );
@@ -76,7 +76,7 @@ const Hero = ({
           <motion.div 
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             variants={fadeUp}
             className="flex flex-col items-center"
           >
