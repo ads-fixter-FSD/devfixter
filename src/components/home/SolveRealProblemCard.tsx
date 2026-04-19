@@ -1,7 +1,10 @@
 "use client";
 import React from "react";
-import { Loader } from "lucide-react";
 import innerdiv from "../../../public/home/solveRealProblem/Innerbtn.png";
+import p1 from "../../../public/home/solveRealProblem/p1.png";
+import p2 from "../../../public/home/solveRealProblem/p2.png";
+import p3 from "../../../public/home/solveRealProblem/p3.png";
+import p4 from "../../../public/home/solveRealProblem/p4.png";
 
 import msg from "../../../public/home/solveRealProblem/msg.png";
 import loading from "../../../public/home/solveRealProblem/loading.png";
@@ -171,24 +174,57 @@ const SolveRealProblemCard = () => {
             </div>
           </div>
         </div>
-        <div>
+        <div className="relative">
           <div className="h-[704px] w-[413px] ">
             <div className="w-[413px] h-[367px] bg-[#000311] border border-[#FFFFFF12] rounded-[30px] shadow-[inset_0px_34px_154px_0px_#FFFFFF12]">
-              <div className="px-[47.5px] pt-[30px]">
+              <div className="px-[30px] pt-[30px]">
                 <div className="mx-auto w-[174px] h-[203px] p-[2px] rounded-[20px] bg-[linear-gradient(180deg,_#00AEFF_0%,_#000000_87.68%)]">
                   <div className="w-full h-full bg-[#000311] rounded-[18px] pb-[30px]  pt-[30px]">
                     <div className="w-[48px] h-0 border-[3px] rounded-2xl border-[#01ADFE] mx-auto "></div>
                     <div className="w-[146px] mx-auto h-[24px] mt-[34px] rounded-[5px] bg-[#030C24]"></div>
                     <div className="w-[146px] mx-auto mt-[6px] h-[24px] rounded-[5px] bg-[#030C24]"></div>
+                    {/* ffff */}
+                    <div className="flex items-center justify-center">
+                      {/* outer glow */}
 
-
-
+                      <div
+                        className="w-[54px] h-[54px] mt-5 flex items-center justify-center rounded-full 
+  bg-[#b53be24d]  border-[1.5px]
+  border-[#B53BE21A] shadow-[0px_32px_24px_-16px_#B53BE266] shadow-[inset_0px_0px_8px_0px_#F8F8F866]"
+                      >
+                        <div className="w-[24px] h-[24px] rounded-[8px] border-0 [border-image:linear-gradient(158.39deg,_rgba(181,59,226,0.1)_14.19%,_rgba(181,59,226,0.000025)_50.59%,_rgba(181,59,226,0.000025)_68.79%,_rgba(181,59,226,0.025)_105.18%)_1] bg-[#B53BE2] flex items-center justify-center">
+                          <Image
+                            src={innerdiv}
+                            alt="icon"
+                            className="w-[12px] h-[12px]"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <p className="text-white font-medium title-s mt-5">
+                  SaaS Application Development
+                </p>
+                <p className="text-[#82869A] text-base mt-3">
+                  Build powerful SaaS platforms with secure and scalable
+                  architecture.
+                </p>
               </div>
             </div>{" "}
-            <div></div>
+
+            {/* 2nd div */}
+            <div className="w-[413px] h-[317px] bg-[#000311] border mt-5 border-[#FFFFFF12] rounded-[30px] shadow-[inset_0px_34px_154px_0px_#FFFFFF12]">
+
+
+
+
+            </div>
           </div>
+          <Image src={p3} alt="line" className="absolute left-[56px] top-[50px] " />
+          <Image src={p4} alt="line" className="absolute left-[80px] top-[150px]" />
+          <Image src={p1} alt="line" className="absolute left-[328px] top-[75px]" />
+          <Image src={p2} alt="line" className="absolute left-[328px] top-[146px]" />
         </div>
 
         {/* last div
