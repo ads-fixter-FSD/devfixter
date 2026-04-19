@@ -6,22 +6,15 @@ import p2 from "../../../public/home/solveRealProblem/p2.png";
 import p3 from "../../../public/home/solveRealProblem/p3.png";
 import p4 from "../../../public/home/solveRealProblem/p4.png";
 
-import msg from "../../../public/home/solveRealProblem/msg.png";
 import loading from "../../../public/home/solveRealProblem/loading.png";
-import internet from "../../../public/home/solveRealProblem/internet.png";
-import phone from "../../../public/home/solveRealProblem/phoneIcon.png";
 import lockMain from "../../../public/home/solveRealProblem/lock.png";
-import pc from "../../../public/home/solveRealProblem/pc.png";
-import search from "../../../public/home/solveRealProblem/seacrch.png";
-import wifi from "../../../public/home/solveRealProblem/wifi.png";
-import virus from "../../../public/home/solveRealProblem/virus.png";
 import pointer from "../../../public/home/solveRealProblem/pointer.png";
-import border1 from "../../../public/home/solveRealProblem/border.png";
 import pen from "../../../public/home/solveRealProblem/pen.png";
 import alfonso from "../../../public/home/solveRealProblem/pointerwithname.png";
 import vendaike from "../../../public/home/solveRealProblem/blue.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
+
 const SolveRealProblemCard = () => {
   return (
     <div>
@@ -178,19 +171,68 @@ const SolveRealProblemCard = () => {
           <div className="h-[704px] w-[413px] ">
             <div className="w-[413px] h-[367px] bg-[#000311] border border-[#FFFFFF12] rounded-[30px] shadow-[inset_0px_34px_154px_0px_#FFFFFF12]">
               <div className="px-[30px] pt-[30px]">
-                <div className="mx-auto w-[174px] h-[203px] p-[2px] rounded-[20px] bg-[linear-gradient(180deg,_#00AEFF_0%,_#000000_87.68%)]">
-                  <div className="w-full h-full bg-[#000311] rounded-[18px] pb-[30px]  pt-[30px]">
-                    <div className="w-[48px] h-0 border-[3px] rounded-2xl border-[#01ADFE] mx-auto "></div>
-                    <div className="w-[146px] mx-auto h-[24px] mt-[34px] rounded-[5px] bg-[#030C24]"></div>
-                    <div className="w-[146px] mx-auto mt-[6px] h-[24px] rounded-[5px] bg-[#030C24]"></div>
-                    {/* ffff */}
-                    <div className="flex items-center justify-center">
-                      {/* outer glow */}
+                <div className="mx-auto w-[174px] h-[203px] p-[2px] rounded-[20px] bg-[linear-gradient(180deg,_#00AEFF_0%,_#000000_87.68%)] overflow-hidden relative group">
+                  {/* বর্ডার এনিমেশন লেয়ার */}
+                  <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <motion.div
+                      animate={{ rotate: [0, 360] }}
+                      transition={{
+                        duration: 1.5,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
+                      style={{
+                        background:
+                          "conic-gradient(from 0deg, transparent 0deg, transparent 260deg, #00AEFF 310deg, #FFFFFF 360deg)",
+                        width: "250%",
+                        height: "250%",
+                        position: "absolute",
+                        top: "-75%",
+                        left: "-75%",
+                        filter: "blur(2px)",
+                      }}
+                    />
+                  </div>
 
-                      <div
+                  {/* আপনার অরিজিনাল ইনার কোড, এখন একটি motion.div-এর ভিতরে */}
+                  <div className="w-full h-full bg-[#000311] rounded-[18px] pb-[30px] pt-[30px] relative z-10">
+                    <motion.div
+                      initial={{ y: -20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, ease: "easeOut" }}
+                      className="w-[48px] h-0 border-[3px] rounded-2xl border-[#01ADFE] mx-auto "
+                    ></motion.div>
+
+                    <motion.div
+                      initial={{ y: -20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{
+                        duration: 0.5,
+                        delay: 0.5,
+                        ease: "easeOut",
+                      }}
+                      className="w-[146px] mx-auto h-[24px] mt-[34px] rounded-[5px] bg-[#030C24]"
+                    ></motion.div>
+
+                    <motion.div
+                      initial={{ y: -20, opacity: 0 }}
+                      animate={{ y: 0, opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 1, ease: "easeOut" }}
+                      className="w-[146px] mx-auto mt-[6px] h-[24px] rounded-[5px] bg-[#030C24]"
+                    ></motion.div>
+                    <div className="flex items-center justify-center">
+                      <motion.div
+                        animate={{
+                          y: [0, -8, 0], // হালকা উপরে-নিচে মুভমেন্ট
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: "easeInOut",
+                        }}
                         className="w-[54px] h-[54px] mt-5 flex items-center justify-center rounded-full 
-  bg-[#b53be24d]  border-[1.5px]
-  border-[#B53BE21A] shadow-[0px_32px_24px_-16px_#B53BE266] shadow-[inset_0px_0px_8px_0px_#F8F8F866]"
+            bg-[#b53be24d] border-[1.5px]
+            border-[#B53BE21A] shadow-[0px_32px_24px_-16px_#B53BE266] shadow-[inset_0px_0px_8px_0px_#F8F8F866]"
                       >
                         <div className="w-[24px] h-[24px] rounded-[8px] border-0 [border-image:linear-gradient(158.39deg,_rgba(181,59,226,0.1)_14.19%,_rgba(181,59,226,0.000025)_50.59%,_rgba(181,59,226,0.000025)_68.79%,_rgba(181,59,226,0.025)_105.18%)_1] bg-[#B53BE2] flex items-center justify-center">
                           <Image
@@ -199,10 +241,11 @@ const SolveRealProblemCard = () => {
                             className="w-[12px] h-[12px]"
                           />
                         </div>
-                      </div>
+                      </motion.div>
                     </div>
                   </div>
                 </div>
+
                 <p className="text-white font-medium title-s mt-5">
                   SaaS Application Development
                 </p>
@@ -211,7 +254,7 @@ const SolveRealProblemCard = () => {
                   architecture.
                 </p>
               </div>
-            </div>{" "}
+            </div>
             {/* 2nd div */}
             <div className="w-[413px] h-[317px] bg-[#000311] border mt-5 border-[#FFFFFF12] rounded-[30px] shadow-[inset_0px_34px_154px_0px_#FFFFFF12]">
               <div className="relative">
@@ -819,26 +862,38 @@ const SolveRealProblemCard = () => {
               </div>
             </div>
           </div>
-          <Image
-            src={p3}
-            alt="line"
-            className="absolute left-[56px] top-[50px] "
-          />
-          <Image
-            src={p4}
-            alt="line"
+
+          <motion.div
+            className="absolute left-[56px] top-[50px]" // পজিশন এখন এখানে
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Image src={p3} alt="line" />
+          </motion.div>
+
+          <motion.div
             className="absolute left-[80px] top-[150px]"
-          />
-          <Image
-            src={p1}
-            alt="line"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Image src={p4} alt="line" />
+          </motion.div>
+
+          <motion.div
             className="absolute left-[328px] top-[75px]"
-          />
-          <Image
-            src={p2}
-            alt="line"
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Image src={p1} alt="line" />
+          </motion.div>
+
+          <motion.div
             className="absolute left-[328px] top-[146px]"
-          />
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <Image src={p2} alt="line" />
+          </motion.div>
         </div>
 
         {/* last div
