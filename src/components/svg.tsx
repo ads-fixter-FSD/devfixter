@@ -48,6 +48,63 @@ export const SecureImage = (props: React.SVGProps<SVGSVGElement>) => (
 
 
 );
+export const Blue = (props: React.SVGProps<SVGSVGElement>) => (
+
+<svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.4008 14.0358L5.92858 14.0358L5.92858 10.8394C4.20124 11.8528 2.17166 12.4367 0.00030999 12.4367L0.000309971 7.17326C3.27441 7.17326 5.92858 4.62038 5.92858 1.47125L5.92858 8.58977e-05L11.4008 8.59173e-05L11.4008 14.0358Z" fill="#62B6FF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.27852e-05 0.877139L3.19214 0.877134L3.19214 4.38607L7.93934e-05 4.38607L7.27852e-05 0.877139Z" fill="#62B6FF"/>
+</svg>
+
+
+
+
+
+
+);
+export const Red = (props: React.SVGProps<SVGSVGElement>) => (
+
+<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.7853 0L11.7117 3.36641L0 0L11.7117 14.9084L15.7853 11.542V0Z" fill="url(#paint0_linear_17_300)"/>
+<defs>
+<linearGradient id="paint0_linear_17_300" x1="15.2761" y1="11.542" x2="8.5916" y2="-4.14254" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFD4A2"/>
+<stop offset="1" stop-color="#FE0159"/>
+</linearGradient>
+</defs>
+</svg>
+
+
+
+
+
+);
+export const WhiteRight = (props: React.SVGProps<SVGSVGElement>) => (
+
+<svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.7853 0L11.7117 3.36641L0 0L11.7117 14.9084L15.7853 11.542V0Z" fill="white"/>
+</svg>
+
+
+
+
+
+
+);
+export const Whitecross = (props: React.SVGProps<SVGSVGElement>) => (
+
+<svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.23012 2.70621L11.4375 2.70621" stroke="white" stroke-width="5.26178"/>
+<path d="M1.09145 10.5988L5.29883 10.5988" stroke="white" stroke-width="5.26178"/>
+<path d="M10.5258 11.3958L1.96848 1.74561" stroke="white" stroke-width="5.26178"/>
+</svg>
+
+
+
+
+
+
+
+);
 
 
 
