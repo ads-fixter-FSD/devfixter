@@ -140,7 +140,7 @@ const Integrations = () => {
     </section>
   );
 };
-
+// 
 const TechIcon = ({
   icon,
   delay = 0,
