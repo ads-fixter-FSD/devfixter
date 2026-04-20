@@ -5,7 +5,7 @@ const BANNER_IMAGE = "/images/banner.svg";
 
 export default function Banner() {
   return (
-    <div className="h-auto lg:h-[1476px]">
+    <div className="h-auto lg:h-[1476px] md:mb-20">
       <div className="flex w-full justify-center px-3 sm:px-4 hero-banner-bg h-auto lg:h-[1132px]">
         <div className="relative mx-auto w-full pb-16 lg:pb-[380px] max-w-[1440px]">
 
@@ -57,9 +57,9 @@ export default function Banner() {
               tablet (md)    : visible, image scaled down ~78%
               desktop (lg+)  : full Figma size, absolute positioned
           */}
-          <div className="hidden md:block relative mx-auto w-full">
+          <div className="hidden md:block relative mx-auto w-full ">
             <div
-              className="relative mx-auto w-full flex justify-center lg:absolute lg:mx-0"
+              className="relative   mx-auto w-full flex justify-center lg:absolute lg:mx-0"
               style={{ top: "120px", left: "0px" }}
             >
               {/* Outer bound — Figma Dashboard: 1300×805 */}
