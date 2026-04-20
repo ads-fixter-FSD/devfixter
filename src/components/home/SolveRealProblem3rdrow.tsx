@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import innerdiv from "../../../public/home/solveRealProblem/Innerbtn.png";
+import { fadeDown, fadeUp } from "../../../utils/animation";
 
 import React from "react";
 import {
@@ -13,6 +14,7 @@ import {
   Whitecross,
   WhiteRight,
 } from "../svg";
+
 import { AiOutlinePlus } from "react-icons/ai";
 import Image from "next/image";
 import { div } from "framer-motion/client";
@@ -68,14 +70,14 @@ const SolveRealProblem3rdrow = () => {
               <AiIcon></AiIcon>
               AI Cognito Pilot{" "}
             </button>
-            <div className="absolute left-1/2 -bottom-1">
+            <div className="absolute right-[41px] -bottom-1">
               <div className="w-[14px] flex items-center justify-center h-[14px] bg-[#B53BE2] rounded-[6px] shadow-[inset_0px_-4px_9px_0px_#EAB1FF] ">
                 <span>
                   <AiOutlinePlus className="text-[11px]" />
                 </span>
               </div>
             </div>
-            <div className="absolute top-[43px] left-[65px]">
+            <div className="absolute top-[43px] left-[70px]">
               <svg
                 width="130"
                 height="61"
@@ -351,27 +353,37 @@ const SolveRealProblem3rdrow = () => {
             </div>
           </motion.div>
         </div>
-        <div className="px-7.5">
+        <motion.div
+                      initial="hidden"
+          whileInView="visible"
+          custom={0.2}
+viewport={{ once: false, amount: 0.3 }}                  variants={fadeDown}  className="px-7.5">
           <p className="title-s mt-4 text-white ">Web App Development</p>
           <p className="text-base text-[#82869A] mt-3">
             Interactive and user-friendly web applications for real-world use.
           </p>
-        </div>
+        </motion.div>
       </div>
 
       {/* 2nd */}
       <div className="h-[367px] w-[414px] mt-5 bg-[#000311] border border-[#FFFFFF12] rounded-[30px] shadow-[inset_0px_34px_154px_0px_#FFFFFF12]">
-        <div className="px-7.5">
+        <motion.div
+              initial="hidden"
+          whileInView="visible"
+          custom={0.2}
+viewport={{ once: false, amount: 0.3 }}                  variants={fadeUp}
+          className="px-7.5">
           <p className="title-s mt-4 text-white ">
             Secure Development Practices
           </p>
           <p className="text-base text-[#82869A] mt-3">
             We follow best practices to ensure safe and reliable systems.
           </p>
-        </div>
+        </motion.div>
+
         <div className="relative">
           {/* up */}
-          <div className="absolute left-[130px] top-2">
+          <div className="absolute left-40 top-2">
             {/* left */}
             <svg
               width="43"
@@ -429,7 +441,7 @@ const SolveRealProblem3rdrow = () => {
             `}</style>
           </div>
           {/* right */}
-          <div className="absolute left-[172px] top-2">
+          <div className="absolute left-50.5 top-2">
             <svg
               width="43"
               height="125"
@@ -498,103 +510,103 @@ const SolveRealProblem3rdrow = () => {
           </div>
           {/* red */}
           <div className="absolute left-2 top-20">
-                    <motion.div
-          // ফ্লোটিং এনিমেশন
-          animate={{
-            y: [0, -6, 0],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
-          style={{
-            width: "40.34px",
-            height: "40.34px",
-            top: "535.98px",
-            left: "334.66px",
-            borderRadius: "50%",
-            background: "#16021E",
-          }}
-        >
-          <Red></Red>
-        </motion.div>
+            <motion.div
+              // ফ্লোটিং এনিমেশন
+              animate={{
+                y: [0, -6, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+              style={{
+                width: "40.34px",
+                height: "40.34px",
+                top: "535.98px",
+                left: "334.66px",
+                borderRadius: "50%",
+                background: "#16021E",
+              }}
+            >
+              <Red></Red>
+            </motion.div>
           </div>
           {/* blue */}
           <div className="absolute left-2 top-38">
             <motion.div
-          // ফ্লোটিং এনিমেশন
-          animate={{
-            y: [0, -6, 0],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
-          style={{
-            width: "40.34px",
-            height: "40.34px",
-            top: "535.98px",
-            left: "334.66px",
-            borderRadius: "50%",
-            background: "#16021E",
-          }}
-        >
-          <Blue></Blue>
-        </motion.div>{" "}
+              // ফ্লোটিং এনিমেশন
+              animate={{
+                y: [0, -6, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+              style={{
+                width: "40.34px",
+                height: "40.34px",
+                top: "535.98px",
+                left: "334.66px",
+                borderRadius: "50%",
+                background: "#16021E",
+              }}
+            >
+              <Blue></Blue>
+            </motion.div>{" "}
           </div>
           {/* white c */}
-          <div className="absolute top-20 left-75">
-                     <motion.div
-          // ফ্লোটিং এনিমেশন
-          animate={{
-            y: [0, -6, 0],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
-          style={{
-            width: "40.34px",
-            height: "40.34px",
-            top: "535.98px",
-            left: "334.66px",
-            borderRadius: "50%",
-            background: "#16021E",
-          }}
-        >
-          <Whitecross></Whitecross>
-        </motion.div>{" "}
+          <div className="absolute top-20 left-89">
+            <motion.div
+              // ফ্লোটিং এনিমেশন
+              animate={{
+                y: [0, -6, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+              style={{
+                width: "40.34px",
+                height: "40.34px",
+                top: "535.98px",
+                left: "334.66px",
+                borderRadius: "50%",
+                background: "#16021E",
+              }}
+            >
+              <Whitecross></Whitecross>
+            </motion.div>{" "}
           </div>
           {/* white r */}
-          <div className="absolute top-38 left-75">
-  <motion.div
-          // ফ্লোটিং এনিমেশন
-          animate={{
-            y: [0, -6, 0],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
-          style={{
-            width: "40.34px",
-            height: "40.34px",
-            top: "535.98px",
-            left: "334.66px",
-            borderRadius: "50%",
-            background: "#16021E",
-          }}
-        >
-          <WhiteRight></WhiteRight>
-        </motion.div>{" "}
+          <div className="absolute top-38 left-88">
+            <motion.div
+              // ফ্লোটিং এনিমেশন
+              animate={{
+                y: [0, -6, 0],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+              style={{
+                width: "40.34px",
+                height: "40.34px",
+                top: "535.98px",
+                left: "334.66px",
+                borderRadius: "50%",
+                background: "#16021E",
+              }}
+            >
+              <WhiteRight></WhiteRight>
+            </motion.div>{" "}
           </div>
           {/* left arrow */}
           <div className="absolute left-12 top-[165px]">
@@ -605,8 +617,8 @@ const SolveRealProblem3rdrow = () => {
             />
           </div>
           {/* right arrow  */}
-      
-           <div className="absolute left-71.5 top-[165px]">
+
+          <div className="absolute left-84 top-[165px]">
             <RiArrowDropRightLine
               size={15}
               className="thin-arrow"
@@ -614,7 +626,7 @@ const SolveRealProblem3rdrow = () => {
             />
           </div>
           {/* right arrow  */}
-             <div className="absolute left-71.5 top-[88px]">
+          <div className="absolute left-85 top-[88px]">
             <RiArrowDropRightLine
               size={15}
               className="thin-arrow"
@@ -741,7 +753,7 @@ const SolveRealProblem3rdrow = () => {
             `}</style>
           </div>
           {/* div right up  */}
-          <div className="absolute top-23 left-[170px]">
+          <div className="absolute top-23 left-[224px]">
             <svg
               width="124"
               height="43"
@@ -802,7 +814,7 @@ const SolveRealProblem3rdrow = () => {
             `}</style>
           </div>
           {/* right down */}
-          <div className="absolute top-[134px] left-[177px]">
+          <div className="absolute top-[134px] left-[224px]">
             <svg
               width="117"
               height="43"
@@ -863,13 +875,13 @@ const SolveRealProblem3rdrow = () => {
           </div>
           {/* btn */}
           <div
-            className="flex z-55  absolute top-[100px] right-1/2 items-center justify-center overflow-hidden backdrop-blur-[4px]"
+            className="flex z-55 absolute top-[100px] left-[170px] items-center justify-center overflow-hidden backdrop-blur-[4px] moving-bubble"
             style={{
               width: "64.9px",
               height: "64.9px",
               borderRadius: "50%",
               background: "rgba(181, 59, 226, 0.25)",
-              border: "1.32px ",
+              border: "1.32px", // আপনার দেওয়া আগের ভ্যালু
               borderColor: "rgba(181, 59, 226, 0.2)",
               boxShadow: `
       0px 28.06px 21.05px -14.03px rgba(181, 59, 226, 0.1), 
@@ -878,11 +890,27 @@ const SolveRealProblem3rdrow = () => {
             }}
           >
             <SecureImage className="w-[24px] h-[24px]" />
+
+            <style jsx>{`
+              .moving-bubble {
+                animation: move 4s ease-in-out infinite;
+              }
+
+              @keyframes move {
+                0%,
+                100% {
+                  transform: translateY(0);
+                }
+                50% {
+                  transform: translateY(-10px);
+                } /* শুধু একটু ওপর-নিচ করবে */
+              }
+            `}</style>
           </div>
           {/* down */}
           <div>
             {/* left */}
-            <div className="absolute left-32.5 top-32 z-10">
+            <div className="absolute left-40 top-32 z-10">
               <svg
                 width="43"
                 height="111"
@@ -942,7 +970,7 @@ const SolveRealProblem3rdrow = () => {
               `}</style>
             </div>
             {/* right */}
-            <div className="absolute top-32 left-43">
+            <div className="absolute top-32 left-50.5">
               <svg
                 width="43"
                 height="112"
@@ -1010,9 +1038,4 @@ const SolveRealProblem3rdrow = () => {
 
 export default SolveRealProblem3rdrow;
 
-<div>
- 
-      
-        
-
-</div>
+<div></div>;
