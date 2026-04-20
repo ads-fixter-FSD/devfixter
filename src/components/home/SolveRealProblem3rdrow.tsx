@@ -489,7 +489,6 @@ const SolveRealProblem3rdrow = () => {
 
             <style jsx>{`
               .continuous-zigzag-light {
-                /* ২০ পিক্সেল আলো, বাকিটা গ্যাপ - এটিই লুপ তৈরি করে */
                 stroke-dasharray: 30, 150;
                 animation: zigzag-flow 2s linear infinite;
               }
