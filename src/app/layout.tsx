@@ -10,8 +10,14 @@ const interTight = Inter_Tight({
 });
 
 export const metadata: Metadata = {
-  title: "DevFixter | High-Performance Development",
-  description: "DevFixter is your premier platform for modern, scalable, and beautifully designed web application development.",
+  title: "DevFixter",
+  description:
+    "DevFixter is your premier platform for modern, scalable, and beautifully designed web application development.",
+    icons: {
+    icon: '/dev-logo.svg', 
+    shortcut: '/dev-logo.svg',
+    apple: '/dev-logo.svg',
+  },
 };
 
 export default function RootLayout({
@@ -21,16 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en" 
+      lang="en"
       suppressHydrationWarning
       className={`${interTight.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
         {/* Added top padding to account for fixed navbar */}
-        <main className="flex-grow    mx-auto w-full">
-          {children}
-        </main>
+        <main className="flex-grow  pb-12  mx-auto w-full">{children}</main>
         <Footer />
       </body>
     </html>
