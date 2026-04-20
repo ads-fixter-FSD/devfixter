@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { motion } from "framer-motion";
 import { fadeUp } from "../../../../utils/animation";
 
-
 const icon1 = (
   <svg
     width="20"
@@ -220,12 +219,15 @@ const DevFixterStats = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="mt-[120px] px-6 overflow-hidden">
+    <section ref={containerRef} className="mt-[120px] px-6 overflow-hidden ">
       <div className="custom-container grid grid-cols-1 lg:grid-cols-2 gap-5 items-center ">
-        {/* Left Side: Visual Node Network */}
-        {/* <div className="relative h-[400px] md:h-[550px] w-full flex items-center justify-center overflow-hidden border border-amber-300"> */}
-        <div
-          className="
+        {/* Left Side: Visual Node Network */} 
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="mx-auto
       relative w-full max-w-[630px] h-[400px] md:h-[516px] 
       flex items-center justify-center overflow-hidden 
       transition-all duration-700 opacity-100
@@ -523,7 +525,7 @@ const DevFixterStats = () => {
             <div className="relative">
               {/* 1. User Profile Pic */}
               <div className="absolute -top-4 left-[66px] z-30">
-                <div className="w-8 h-8 rounded-full border-2 border-primary/50 overflow-hidden bg-gray-800 shadow-lg">
+                <div className="w-[30px] h-[30px] rounded-full  overflow-hidden bg-gray-800 shadow-lg">
                   <img
                     src="https://i.pravatar.cc/30?img=5"
                     alt="user"
@@ -594,7 +596,7 @@ const DevFixterStats = () => {
               {/* 1. User Profile Pic (Vertical Line-er shesh mathay) */}
 
               <div className="absolute top-[110px] left-[101px] z-30">
-                <div className="w-8 h-8 rounded-full border-2 border-primary/50 overflow-hidden bg-gray-800 shadow-lg">
+                <div className="w-[30px] h-[30px] rounded-full  overflow-hidden bg-gray-800 shadow-lg">
                   <img
                     src="https://i.pravatar.cc/30?img=12"
                     alt="user"
@@ -657,15 +659,20 @@ const DevFixterStats = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* ========================= Right Side: Stats Grid ============== */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[630px]">
-          {statsData.map((stat) => (
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-[630px] mx-auto"
+        >
+          {statsData.map((stat, index) => (
             <div
-              key={stat.id}
-              className="
-        relative flex flex-col justify-center p-8 transition-all duration-300
+              className=" 
+     relative flex flex-col justify-center p-6 transition-all duration-300
         /* Dimensions */
         w-full md:w-[305px] h-auto md:h-[248px]
         /* BG, Border & Radius */
@@ -676,18 +683,24 @@ const DevFixterStats = () => {
         hover:border-primary/50 group
       "
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-2 text-white group-hover:text-primary transition-colors">
-                {stat.value}
-              </h2>
-              <p className="text-base font-medium mb-4 text-white/90">
-                {stat.label}
-              </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="flex flex-col gap-3 pb-[60px]"
+              >
+                <h2 className="title-md font-medium text-white group-hover:text-primary transition-colors">
+                  {stat.value}
+                </h2>
+                <p className="text-base  text-white">{stat.label}</p>
+              </motion.div>
+              <p className="text-sm ftext-color leading-relaxed">
                 {stat.description}
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
