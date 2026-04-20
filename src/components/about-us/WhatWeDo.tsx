@@ -1,18 +1,34 @@
 
+"use client";
 import React from "react";
 import Badge from "../shared/Badge";
-import Link from "next/link";
 import Image from "next/image";
 import PrimaryButton from "../button/PrimaryButton";
+import { motion, Variants } from "framer-motion";
 
 export default function WhatWeDo() {
+  
+  const fadeInUp: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.6, ease: "easeOut" } 
+    }
+  };
+
   return (
     <div className="pt-20 lg:pt-30 px-3 md:px-0">
-      
-      <div className="custom-container min-h-auto lg:h-[520px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0">
+      <div className="custom-container min-h-auto lg:h-[520px] flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-0 overflow-hidden">
         
         {/* Left Side: Image Section */}
-        <div className="w-full lg:w-[560px] h-[300px] lg:h-full relative rounded-[30px] overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, x: -60 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="w-full lg:w-[560px] h-[300px] lg:h-full relative rounded-[30px] overflow-hidden"
+        >
           <Image
             src="/aboutUs/whatWeDo.svg"
             alt="Our Team"
@@ -21,28 +37,45 @@ export default function WhatWeDo() {
             className="object-cover"
             priority
           />
-        </div>
+        </motion.div>
 
-        {/* Right Side: Content */}
-        <div className="w-full lg:w-[630px] flex flex-col gap-6 items-start justify-center">
+        {/* Right Side: Content Section  */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="w-full lg:w-[630px] flex flex-col gap-6 items-start justify-center"
+        >
           <div className="flex flex-col gap-[14px]">
-            <Badge>What We Do</Badge>
-            <div className="title-md">
+            <motion.div variants={fadeInUp}>
+              <Badge>What We Do</Badge>
+            </motion.div>
+            
+            <motion.div 
+              variants={fadeInUp} 
+              transition={{ delay: 0.2 }} 
+              className="title-md"
+            >
               We Design, Develop, and Scale <br className="hidden lg:block" /> 
               Powerful Digital Solutions for <br className="hidden lg:block" />
               Businesses
-            </div>
+            </motion.div>
           </div>
           
           <div className="flex flex-col gap-[30px] w-full lg:w-[597px]">
-            <div className="text-base text-[#9B9EA8]">
+            <motion.div 
+              variants={fadeInUp} 
+              transition={{ delay: 0.3 }} 
+              className="text-base text-[#9B9EA8]"
+            >
               Whether you&apos;re a startup or an established business, we
               provide end-to-end development services to bring your ideas to
               life. From planning and UI integration to backend development and
               deployment, we ensure your product is fast, secure, and built for
               growth.
-            </div>
-            <div>
+            </motion.div>
+            
+            <motion.div variants={fadeInUp} transition={{ delay: 0.4 }}>
               <PrimaryButton>
                 Start Your Project{" "}
                 <span>
@@ -63,9 +96,9 @@ export default function WhatWeDo() {
                   </svg>
                 </span>
               </PrimaryButton>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </div>

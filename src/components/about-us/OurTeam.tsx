@@ -1,16 +1,44 @@
+"use client";
 import React from "react";
 import Badge from "../shared/Badge";
 import { TEAM_MEMBERS } from "@/constants/team";
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
 
 export default function OurTeam() {
+  // Common Fade Up Variant
+  const fadeInUp: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.6, ease: "easeOut" } 
+    }
+  };
+
+  
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15, 
+      },
+    },
+  };
+
   return (
     <div className="py-20 lg:py-30 px-3 md:px-0">
-  
       <div className="custom-container min-h-auto lg:h-[640px] flex flex-col items-center justify-between gap-12 lg:gap-0">
         
-     
-        <div className="flex flex-col gap-6 w-full lg:w-[734px]">
+        {/* Header Section */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          className="flex flex-col gap-6 w-full lg:w-[734px]"
+        >
           <div className="flex flex-col items-center gap-3">
             <Badge>Our Team</Badge>
             <div className="text-center title-lg">
@@ -23,12 +51,20 @@ export default function OurTeam() {
             digital solutions. We work together to turn ideas into powerful
             products.
           </div>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+        {/* Grid Section with Staggered Fade Up */}
+        <motion.div 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full"
+        >
           {TEAM_MEMBERS.map((member) => (
-            <div
+            <motion.div
               key={member.id}
+              variants={fadeInUp}
               className="h-[350px] lg:h-[350px] relative rounded-[10px] overflow-hidden group cursor-pointer"
             >
               <Image
@@ -39,6 +75,7 @@ export default function OurTeam() {
                 className="object-cover"
               />
 
+              {/* Hover Overlay  */}
               <div
                 className="absolute inset-0 transition-all duration-500 opacity-0 group-hover:opacity-100 flex flex-col justify-end p-6"
                 style={{
@@ -53,9 +90,9 @@ export default function OurTeam() {
                   {member.designation}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

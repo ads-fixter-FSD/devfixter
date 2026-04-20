@@ -13,7 +13,7 @@ import HowWeBuild from './_component/HowWeBuild'
 
 export default function page() {
   return (
-    <div>
+    <div className='bg-black'>
         <Hero
       badge={
         <Badge>
