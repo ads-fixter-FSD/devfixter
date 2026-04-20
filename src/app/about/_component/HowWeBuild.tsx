@@ -106,7 +106,7 @@ export default function HowWeBuild() {
   return (
     <section
       ref={containerRef}
-      className="bg-black text-white py-24 px-6 overflow-hidden"
+      className="bg-black text-white  px-6 overflow-hidden"
     >
       {/* Header */}
       <div className="max-w-[440px] mx-auto text-center mb-20 ">
