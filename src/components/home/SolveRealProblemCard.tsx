@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import innerdiv from "../../../public/home/solveRealProblem/Innerbtn.png";
 import p1 from "../../../public/home/solveRealProblem/p1.png";
 import p2 from "../../../public/home/solveRealProblem/p2.png";
 import p3 from "../../../public/home/solveRealProblem/p3.png";
