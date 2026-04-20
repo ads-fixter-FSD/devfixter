@@ -10,6 +10,7 @@ import Image from 'next/image'
 import React from 'react'
 import { FiArrowRight } from 'react-icons/fi'
 import HowWeBuild from './_component/HowWeBuild'
+import DevFixterStats from './_component/DevFixterStats'
 
 export default function page() {
   return (
@@ -47,6 +48,7 @@ export default function page() {
  
     <OurStory></OurStory>
     <HowWeBuild />
+    <DevFixterStats />
     <WhatWeDo></WhatWeDo>
 
     <OurTeam></OurTeam>
