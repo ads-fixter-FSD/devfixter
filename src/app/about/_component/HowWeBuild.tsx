@@ -106,11 +106,18 @@ export default function HowWeBuild() {
   return (
     <section
       ref={containerRef}
-      className="bg-black text-white  px-6 overflow-hidden"
+      className="bg-black text-white  px-6 overflow-hidden mt-20"
     >
       {/* Header */}
       <div className="max-w-[440px] mx-auto text-center mb-20 ">
-        <div className="flex flex-col items-center gap-6">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeUp}
+          custom={0.2}
+          className="flex flex-col items-center gap-6"
+        >
           <Badge>Our Value</Badge>
           <h2 className="title-lg">
             How We Build Better <br /> Digital Products
@@ -119,7 +126,7 @@ export default function HowWeBuild() {
             At DevFixter, we follow a clear approach to development focusing on
             performance.
           </p>
-        </div>
+        </motion.div>
         <PrimaryButton className="mt-[68px]">Start Your Project</PrimaryButton>
       </div>
 
