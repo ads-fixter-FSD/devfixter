@@ -169,14 +169,14 @@ const SolveRealProblem3rdrow = () => {
               <AiInt></AiInt>
               Ai Inteligence{" "}
             </button>
-            <div className="absolute left-1/2 -bottom-1">
+            <div className="absolute right-[42px] -bottom-1">
               <div className="w-[14px] flex items-center justify-center h-[14px] bg-[#B53BE2] rounded-[6px] shadow-[inset_0px_-4px_9px_0px_#EAB1FF] ">
                 <span>
                   <AiOutlinePlus className="text-[11px]" />
                 </span>
               </div>
             </div>
-            <div className="absolute top-10 left-[65px]">
+            <div className="absolute top-10 left-[69px]">
               <svg
                 width="1"
                 height="67"
@@ -334,7 +334,7 @@ const SolveRealProblem3rdrow = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center mt-[25px] ml-3">
+        <div className="flex items-center justify-center mt-[25px] ml-6">
           <motion.div
             animate={{
               y: [0, -8, 0],
@@ -349,15 +349,81 @@ const SolveRealProblem3rdrow = () => {
             border-[#B53BE21A] shadow-[0px_32px_24px_-16px_#B53BE266] shadow-[inset_0px_0px_8px_0px_#F8F8F866]"
           >
             <div className="w-[24px] h-[24px] rounded-[8px] border-0 [border-image:linear-gradient(158.39deg,_rgba(181,59,226,0.1)_14.19%,_rgba(181,59,226,0.000025)_50.59%,_rgba(181,59,226,0.000025)_68.79%,_rgba(181,59,226,0.025)_105.18%)_1] bg-[#B53BE2] flex items-center justify-center">
-              <Image src={innerdiv} alt="icon" className="w-[12px] h-[12px]" />
+              <div>
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g filter="url(#filter0_d_17_150)">
+                    <path
+                      d="M13.6875 6.94043H13.6904L13.6885 6.94141L13.6914 6.94531H13.6865L9.16211 12.8857L11.0879 6.94531H11.0801L6.5293 1L4.60254 6.94043H4.61133L9.16211 12.8857H6.54004L2.00391 6.94531H2.00098L2.00195 6.94336L2 6.94043H2.00488L6.5293 1H9.15137L13.6875 6.94043Z"
+                      fill="url(#paint0_linear_17_150)"
+                    />
+                  </g>
+                  <defs>
+                    <filter
+                      id="filter0_d_17_150"
+                      x="0"
+                      y="0"
+                      width="15.6914"
+                      height="15.8857"
+                      filterUnits="userSpaceOnUse"
+                      color-interpolation-filters="sRGB"
+                    >
+                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                      <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                        result="hardAlpha"
+                      />
+                      <feOffset dy="1" />
+                      <feGaussianBlur stdDeviation="1" />
+                      <feComposite in2="hardAlpha" operator="out" />
+                      <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0.0431373 0 0 0 0 0.0901961 0 0 0 0 0.32549 0 0 0 0.5 0"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in2="BackgroundImageFix"
+                        result="effect1_dropShadow_17_150"
+                      />
+                      <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect1_dropShadow_17_150"
+                        result="shape"
+                      />
+                    </filter>
+                    <linearGradient
+                      id="paint0_linear_17_150"
+                      x1="7.84562"
+                      y1="1"
+                      x2="7.84562"
+                      y2="12.8859"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stop-color="white" />
+                      <stop offset="1" stop-color="#EAB1FF" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
             </div>
           </motion.div>
         </div>
         <motion.div
-                      initial="hidden"
+          initial="hidden"
           whileInView="visible"
           custom={0.2}
-viewport={{ once: false, amount: 0.3 }}                  variants={fadeDown}  className="px-7.5">
+          viewport={{ once: false, amount: 0.3 }}
+          variants={fadeDown}
+          className="px-7.5"
+        >
           <p className="title-s mt-4 text-white ">Web App Development</p>
           <p className="text-base text-[#82869A] mt-3">
             Interactive and user-friendly web applications for real-world use.
@@ -368,11 +434,13 @@ viewport={{ once: false, amount: 0.3 }}                  variants={fadeDown}  cl
       {/* 2nd */}
       <div className="h-[367px] w-[414px] mt-5 bg-[#000311] border border-[#FFFFFF12] rounded-[30px] shadow-[inset_0px_34px_154px_0px_#FFFFFF12]">
         <motion.div
-              initial="hidden"
+          initial="hidden"
           whileInView="visible"
           custom={0.2}
-viewport={{ once: false, amount: 0.3 }}                  variants={fadeUp}
-          className="px-7.5">
+          viewport={{ once: false, amount: 0.3 }}
+          variants={fadeUp}
+          className="px-7.5"
+        >
           <p className="title-s mt-4 text-white ">
             Secure Development Practices
           </p>
