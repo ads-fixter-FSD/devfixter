@@ -35,6 +35,7 @@ const Integrations = () => {
     >
       {/* Header Section */}
       <motion.div
+      // 
         variants={fadeUp}
         initial="hidden"
         whileInView={"visible"}
