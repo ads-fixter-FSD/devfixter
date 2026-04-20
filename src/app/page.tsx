@@ -10,12 +10,12 @@ export default function Home() {
   return (
     <div className="bg-black pt-20">
       <Banner></Banner>
+      <HowItWorks />
       <SolveRealProblems></SolveRealProblems>
       <KeyBenefits />
-      <HowItWorks />
-      <FAQSection />
       <PricingSection/>
       <Integrations/>
+      <FAQSection />
     </div>
   );
 }

@@ -12,8 +12,8 @@ import ContactCTA from "./ContactCTA";
 
 const Footer = () => {
   return (
-    <footer className="w-full pb-[36px] ">
-        <ContactCTA />
+    <footer className="w-full pb-[36px] bg-black ">
+      <ContactCTA />
       {/* Outer Container (1280px) */}
       <div className="custom-container px-5 mx:px-0">
         {/* Inner Wrapper (Width: 1160px) */}
@@ -35,26 +35,45 @@ const Footer = () => {
             {/* Newsletter */}
             <div>
               <h4 className="title-s mb-4 text-foreground">Newsletter</h4>
-              <div className="flex gap-2 p-1 border border-border rounded-[14px] bg-card-dark focus-within:border-primary transition-all">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="bg-transparent border-none outline-none px-4 py-[11px] w-full text-base text-foreground"
-                />
-                <PrimaryButton>Subscribe</PrimaryButton>
+              {/* <div className="flex items-center gap-2">
+                <div className="flex gap-2 p-1 border border-border rounded-[14px] bg-card-dark focus-within:border-primary transition-all">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="bg-transparent max-h-[44px] border-none outline-none px-4 py-[11px] w-full text-base text-foreground"
+                  />
+                </div>
+                <PrimaryButton className="max-h-[44px] px-4 py-[11px]">
+                  Subscribe
+                </PrimaryButton>
+              </div> */}
+              <div className="flex items-center gap-1">
+                {/* input filed */}
+                <div className="flex items-center h-[44px] border border-[#191C28] rounded-[12px] focus-within:border-[#B53BE2] transition-all px-4 ">
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="bg-transparent border-none outline-none text-base text-white w-full placeholder:text-gray-500"
+                  />
+                </div>
+
+                <button className="btn-primary-custom  px-[16px] h-[44px]">
+                  Subscribe
+                </button>
               </div>
             </div>
           </div>
 
           {/* Right Side (Width: 727px) */}
-          <div className="w-full lg:w-[727px] flex flex-wrap lg:flex-nowrap gap-[120px]">
+          {/* Right Side (Width: 727px) */}
+          <div className="w-full lg:w-[727px] grid grid-cols-2 lg:flex lg:flex-nowrap md:gap-[120px] gap-x-10 gap-y-10">
             {/* Pages Col 1 - Content based width */}
             <div className="shrink-0">
-              <h4 className="text-base text-white mb-3 font-medium ">Pages</h4>
-              <ul className="space-y-4 text-muted text-sm">
+              <h4 className="text-base text-white mb-3 font-medium">Pages</h4>
+              <ul className="space-y-4 ftext-color text-sm">
                 <li>
                   <a href="#" className="hover:text-primary transition">
-                    Home
+                    Home 
                   </a>
                 </li>
                 <li>
@@ -88,7 +107,7 @@ const Footer = () => {
             {/* Pages Col 2 - Content based width */}
             <div className="shrink-0">
               <h4 className="text-base text-white mb-3 font-medium">Pages</h4>
-              <ul className="space-y-4 text-muted text-sm">
+              <ul className="space-y-4 ftext-color text-sm">
                 <li>
                   <a href="#" className="hover:text-primary transition">
                     Pricing Single
@@ -115,7 +134,7 @@ const Footer = () => {
             {/* Utility Col - Content based width */}
             <div className="shrink-0">
               <h4 className="text-base text-white mb-3 font-medium">Utility</h4>
-              <ul className="space-y-4 text-muted text-sm">
+              <ul className="space-y-4 ftext-color text-sm">
                 <li>
                   <a href="#" className="hover:text-primary transition">
                     Style Guide
@@ -148,27 +167,28 @@ const Footer = () => {
             <div className="shrink-0">
               <div className="mb-8">
                 <h4 className="text-base text-white mb-3 font-medium">Email</h4>
-                <p className="text-muted text-sm whitespace-nowrap">
+                <p className="ftext-color text-sm whitespace-nowrap">
                   devfixter@gmail.com
                 </p>
               </div>
               <div>
-                <h4 className="title-s mb-4 text-foreground">Social Media</h4>
-                <div className="flex gap-[10px] text-muted">
+                <h4 className="text-base text-white mb-4 font-medium">Social Media</h4>
+          
+                <div className="flex gap-[10px] ftext-color">
                   <span className="cursor-pointer hover:text-primary">
-                   <FaFacebookF size={18} />
+                    <FaFacebookF size={18} />
                   </span>
                   <span className="cursor-pointer hover:text-primary">
-                     <FaLinkedinIn size={20} />
+                    <FaLinkedinIn size={20} />
                   </span>
                   <span className="cursor-pointer hover:text-primary">
-                  <IoLogoInstagram size={18}/>
+                    <IoLogoInstagram size={18} />
                   </span>
                   <span className="cursor-pointer hover:text-primary">
-                     <AiOutlineBehance size={25}/>
+                    <AiOutlineBehance size={25} />
                   </span>
                   <span className="cursor-pointer hover:text-primary">
-                     <FaDribbble size={18}/>
+                    <FaDribbble size={18} />
                   </span>
                 </div>
               </div>
@@ -181,7 +201,8 @@ const Footer = () => {
           <p className="text-[#B5BDE2] text-sm pt-[12px]">
             © 2026 DevFixter. All rights reserved.
             <span className="text-foreground ml-1">
-              Design & Development <span className="text-[#B5BDE2]">by</span>  DevFixter
+              Design & Development <span className="text-[#B5BDE2]">by</span>{" "}
+              DevFixter
             </span>
           </p>
         </div>
