@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PrimaryButton from "@/components/button/PrimaryButton";
 import Badge from "@/components/shared/Badge";
+import { fadeUp } from "../../../../utils/animation";
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -104,20 +106,20 @@ export default function HowWeBuild() {
   return (
     <section
       ref={containerRef}
-      className="bg-black text-white py-24 px-6 overflow-hidden"
+      className="bg-black text-white  px-6 overflow-hidden"
     >
       {/* Header */}
       <div className="max-w-[440px] mx-auto text-center mb-20 ">
-         <div className="flex flex-col items-center gap-6">
+        <div className="flex flex-col items-center gap-6">
           <Badge>Our Value</Badge>
-        <h2 className="title-lg">
-          How We Build Better <br /> Digital Products
-        </h2>
-        <p className="text-base text-gray-400">
-          At DevFixter, we follow a clear approach to development focusing on
-          performance.
-        </p>
-         </div>
+          <h2 className="title-lg">
+            How We Build Better <br /> Digital Products
+          </h2>
+          <p className="text-base text-gray-400">
+            At DevFixter, we follow a clear approach to development focusing on
+            performance.
+          </p>
+        </div>
         <PrimaryButton className="mt-[68px]">Start Your Project</PrimaryButton>
       </div>
 
@@ -166,7 +168,12 @@ export default function HowWeBuild() {
               </div>
 
               {/* Content */}
-              <div
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                custom={0.2}
                 className={`flex-1 flex ${
                   step.align === "left"
                     ? "md:justify-end justify-start"
@@ -189,7 +196,7 @@ export default function HowWeBuild() {
                   <h3 className="title-sm mb-4">{step.title}</h3>
                   <p className="text-base text-gray-400">{step.description}</p>
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))}
         </div>
