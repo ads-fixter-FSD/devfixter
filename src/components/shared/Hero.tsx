@@ -48,7 +48,7 @@ const Hero = ({
       <div 
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          background: "linear-gradient(0deg, rgba(181, 59, 226, 0.3) 0%, rgba(0, 0, 0, 1) 100%)",
+          background: "linear-gradient(0deg, rgba(181, 59, 226, 0.7) 0%, rgba(0, 0, 0, 0.15) 100%)",
         }}
       />
 
@@ -66,6 +66,8 @@ const Hero = ({
           <div
             className="absolute left-1/2 z-[2] h-full w-[min(28vw,198px)] -translate-x-1/2 border-x border-[#FFFFFF12] lg:left-[621px] lg:w-[198px] lg:translate-x-0"
             style={{ background: "linear-gradient(360deg, rgba(255, 255, 255, 0.04) 33.01%, rgba(255, 255, 255, 0) 84.98%)" }}
+           
+
           >
             <div className="hero-vline-sheen-middle absolute inset-0 overflow-hidden" />
           </div>
