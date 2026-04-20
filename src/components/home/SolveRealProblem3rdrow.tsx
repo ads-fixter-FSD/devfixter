@@ -16,6 +16,8 @@ import {
 import { AiOutlinePlus } from "react-icons/ai";
 import Image from "next/image";
 import { div } from "framer-motion/client";
+import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri";
+import { ChevronLeft } from "lucide-react";
 
 const SolveRealProblem3rdrow = () => {
   return (
@@ -486,7 +488,139 @@ const SolveRealProblem3rdrow = () => {
               }
             `}</style>
           </div>
-          {/* left up */}
+          {/* left arrow  */}
+          <div className="absolute left-12 top-22">
+            <RiArrowDropLeftLine
+              size={15}
+              className="thin-arrow"
+              style={{ color: "#EAB1FF" }}
+            />
+          </div>
+          {/* red */}
+          <div className="absolute left-2 top-20">
+                    <motion.div
+          // ফ্লোটিং এনিমেশন
+          animate={{
+            y: [0, -6, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+          style={{
+            width: "40.34px",
+            height: "40.34px",
+            top: "535.98px",
+            left: "334.66px",
+            borderRadius: "50%",
+            background: "#16021E",
+          }}
+        >
+          <Red></Red>
+        </motion.div>
+          </div>
+          {/* blue */}
+          <div className="absolute left-2 top-38">
+            <motion.div
+          // ফ্লোটিং এনিমেশন
+          animate={{
+            y: [0, -6, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+          style={{
+            width: "40.34px",
+            height: "40.34px",
+            top: "535.98px",
+            left: "334.66px",
+            borderRadius: "50%",
+            background: "#16021E",
+          }}
+        >
+          <Blue></Blue>
+        </motion.div>{" "}
+          </div>
+          {/* white c */}
+          <div className="absolute top-20 left-75">
+                     <motion.div
+          // ফ্লোটিং এনিমেশন
+          animate={{
+            y: [0, -6, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+          style={{
+            width: "40.34px",
+            height: "40.34px",
+            top: "535.98px",
+            left: "334.66px",
+            borderRadius: "50%",
+            background: "#16021E",
+          }}
+        >
+          <Whitecross></Whitecross>
+        </motion.div>{" "}
+          </div>
+          {/* white r */}
+          <div className="absolute top-38 left-75">
+  <motion.div
+          // ফ্লোটিং এনিমেশন
+          animate={{
+            y: [0, -6, 0],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+          className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+          style={{
+            width: "40.34px",
+            height: "40.34px",
+            top: "535.98px",
+            left: "334.66px",
+            borderRadius: "50%",
+            background: "#16021E",
+          }}
+        >
+          <WhiteRight></WhiteRight>
+        </motion.div>{" "}
+          </div>
+          {/* left arrow */}
+          <div className="absolute left-12 top-[165px]">
+            <RiArrowDropLeftLine
+              size={15}
+              className="thin-arrow"
+              style={{ color: "#EAB1FF" }}
+            />
+          </div>
+          {/* right arrow  */}
+      
+           <div className="absolute left-71.5 top-[165px]">
+            <RiArrowDropRightLine
+              size={15}
+              className="thin-arrow"
+              style={{ color: "#EAB1FF" }}
+            />
+          </div>
+          {/* right arrow  */}
+             <div className="absolute left-71.5 top-[88px]">
+            <RiArrowDropRightLine
+              size={15}
+              className="thin-arrow"
+              style={{ color: "#EAB1FF" }}
+            />
+          </div>
           <div className="absolute left-14 top-23">
             <svg
               width="125"
@@ -876,93 +1010,9 @@ const SolveRealProblem3rdrow = () => {
 
 export default SolveRealProblem3rdrow;
 
-// <div>
-//           <motion.div
-//           // ফ্লোটিং এনিমেশন
-//           animate={{
-//             y: [0, -6, 0],
-//           }}
-//           transition={{
-//             duration: 3,
-//             repeat: Infinity,
-//             ease: "easeInOut",
-//           }}
-//           className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
-//           style={{
-//             width: "40.34px",
-//             height: "40.34px",
-//             top: "535.98px",
-//             left: "334.66px",
-//             borderRadius: "50%",
-//             background: "#16021E",
-//           }}
-//         >
-//           <Whitecross></Whitecross>
-//         </motion.div>{" "}
-//         <motion.div
-//           // ফ্লোটিং এনিমেশন
-//           animate={{
-//             y: [0, -6, 0],
-//           }}
-//           transition={{
-//             duration: 3,
-//             repeat: Infinity,
-//             ease: "easeInOut",
-//           }}
-//           className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
-//           style={{
-//             width: "40.34px",
-//             height: "40.34px",
-//             top: "535.98px",
-//             left: "334.66px",
-//             borderRadius: "50%",
-//             background: "#16021E",
-//           }}
-//         >
-//           <WhiteRight></WhiteRight>
-//         </motion.div>{" "}
-//         <motion.div
-//           // ফ্লোটিং এনিমেশন
-//           animate={{
-//             y: [0, -6, 0],
-//           }}
-//           transition={{
-//             duration: 3,
-//             repeat: Infinity,
-//             ease: "easeInOut",
-//           }}
-//           className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
-//           style={{
-//             width: "40.34px",
-//             height: "40.34px",
-//             top: "535.98px",
-//             left: "334.66px",
-//             borderRadius: "50%",
-//             background: "#16021E",
-//           }}
-//         >
-//           <Blue></Blue>
-//         </motion.div>{" "}
-//         <motion.div
-//           // ফ্লোটিং এনিমেশন
-//           animate={{
-//             y: [0, -6, 0],
-//           }}
-//           transition={{
-//             duration: 3,
-//             repeat: Infinity,
-//             ease: "easeInOut",
-//           }}
-//           className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
-//           style={{
-//             width: "40.34px",
-//             height: "40.34px",
-//             top: "535.98px",
-//             left: "334.66px",
-//             borderRadius: "50%",
-//             background: "#16021E",
-//           }}
-//         >
-//           <Red></Red>
-//         </motion.div>
-// </div>
+<div>
+ 
+      
+        
+
+</div>
