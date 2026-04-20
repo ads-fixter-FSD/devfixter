@@ -3,9 +3,19 @@ import { motion } from "framer-motion";
 import innerdiv from "../../../public/home/solveRealProblem/Innerbtn.png";
 
 import React from "react";
-import { AiIcon, AiInt, Quntam, SecureImage } from "../svg";
+import {
+  AiIcon,
+  AiInt,
+  Blue,
+  Quntam,
+  Red,
+  SecureImage,
+  Whitecross,
+  WhiteRight,
+} from "../svg";
 import { AiOutlinePlus } from "react-icons/ai";
 import Image from "next/image";
+import { div } from "framer-motion/client";
 
 const SolveRealProblem3rdrow = () => {
   return (
@@ -357,17 +367,375 @@ const SolveRealProblem3rdrow = () => {
             We follow best practices to ensure safe and reliable systems.
           </p>
         </div>
+        <div className="relative">
+          {/* up */}
+          <div className="absolute left-[130px] top-2">
+            {/* left */}
+            <svg
+              width="43"
+              height="118"
+              viewBox="0 0 43 118"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M41.8153 72.2179L41.5956 72.5974L3.00918 50.251L3.22892 49.8715L3.44867 49.4921L42.0351 71.8385L41.8153 72.2179ZM3.22892 49.8715L2.79044 49.8715L2.79044 0.438574L3.22893 0.438574L3.66741 0.438574L3.6674 49.8715L3.22892 49.8715ZM41.8153 117.588L41.3768 117.588L41.3768 72.2179L41.8153 72.2179L42.2538 72.2179L42.2538 117.588L41.8153 117.588"
+                stroke="#1A1A1A"
+                strokeWidth="1"
+              />
 
-        <div>
+              {/* অনবরত দৌড়াতে থাকা আলোর লাইন */}
+              <path
+                className="continuous-zigzag-light"
+                d="M3.22893 0.438574L3.22892 49.8715L41.8153 72.2179L41.8153 117.588"
+                stroke="url(#paint0_linear_17_293_bright)"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                fill="none"
+              />
+
+              <defs>
+                <linearGradient
+                  id="paint0_linear_17_293_bright"
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="1"
+                >
+                  <stop offset="0%" stopColor="transparent" />
+                  <stop offset="50%" stopColor="#EAB1FF" />
+                  <stop offset="100%" stopColor="transparent" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            <style jsx>{`
+              .continuous-zigzag-light {
+                /* ২০ পিক্সেল আলো, বাকিটা গ্যাপ - এটিই লুপ তৈরি করে */
+                stroke-dasharray: 30, 150;
+                animation: zigzag-flow 2s linear infinite;
+              }
+
+              @keyframes zigzag-flow {
+                0% {
+                  stroke-dashoffset: 180;
+                }
+                100% {
+                  stroke-dashoffset: 0;
+                }
+              }
+            `}</style>
+          </div>
+          {/* right */}
+          <div className="absolute left-[172px] top-2">
+            <svg
+              width="43"
+              height="125"
+              viewBox="0 0 43 125"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* স্থির ব্যাকগ্রাউন্ড লাইন (আবছা কালো/ধূসর) */}
+              <path
+                d="M39.0249 0.438477L39.0249 48.6664L0.438512 72.4204L0.438509 124.967"
+                stroke="#1A1A1A"
+                strokeWidth="1"
+                fill="none"
+              />
+
+              {/* অনবরত দৌড়াতে থাকা আলোর লাইন */}
+              <path
+                className="continuous-zigzag-reverse"
+                d="M39.0249 0.438477L39.0249 48.6664L0.438512 72.4204L0.438509 124.967"
+                stroke="url(#paint0_linear_zigzag_fade)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                fill="none"
+              />
+
+              <defs>
+                <linearGradient
+                  id="paint0_linear_zigzag_fade"
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="1"
+                >
+                  {/* ওপরের দিকে একদম অস্পষ্ট */}
+                  <stop offset="0%" stopColor="#EAB1FF" stopOpacity="0" />
+                  {/* ৩০% থেকে শুরু হয়ে নিচে নামলে পুরোপুরি গাড়ো হবে */}
+                  <stop offset="100%" stopColor="#EAB1FF" stopOpacity="1" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            <style jsx>{`
+              .continuous-zigzag-reverse {
+                /* আলোর দৈর্ঘ্য এবং গ্যাপ সেট করা হয়েছে */
+                stroke-dasharray: 45, 150;
+                animation: zigzag-flow-reverse 2.8s linear infinite;
+              }
+
+              @keyframes zigzag-flow-reverse {
+                0% {
+                  stroke-dashoffset: 200;
+                }
+                100% {
+                  stroke-dashoffset: 0;
+                }
+              }
+            `}</style>
+          </div>
+          {/* left up */}
+          <div className="absolute left-14 top-23">
+            <svg
+              width="125"
+              height="43"
+              viewBox="0 0 125 43"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* স্থির ব্যাকগ্রাউন্ড লাইন */}
+              <path
+                d="M0.438477 3.229H48.6664L72.4204 41.8154H124.967"
+                stroke="#1A1A1A"
+                strokeWidth="1"
+                fill="none"
+              />
+
+              {/* অনবরত দৌড়াতে থাকা আলোর লাইন */}
+              <path
+                className="horizontal-zigzag-glow"
+                d="M0.438477 3.229H48.6664L72.4204 41.8154H124.967"
+                stroke="url(#paint_horizontal_fade)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                fill="none"
+              />
+
+              <defs>
+                <linearGradient
+                  id="paint_horizontal_fade"
+                  x1="0"
+                  y1="0"
+                  x2="1"
+                  y2="0"
+                >
+                  {/* বাম দিকে অস্পষ্ট */}
+                  <stop offset="0%" stopColor="#EAB1FF" stopOpacity="0" />
+                  {/* ডান দিকে উজ্জ্বল */}
+                  <stop offset="100%" stopColor="#EAB1FF" stopOpacity="1" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            <style jsx>{`
+              .horizontal-zigzag-glow {
+                /* আলোর দৈর্ঘ্য এবং গ্যাপ */
+                stroke-dasharray: 40, 160;
+                animation: horizontal-flow 3s linear infinite;
+              }
+
+              @keyframes horizontal-flow {
+                0% {
+                  stroke-dashoffset: 200;
+                }
+                100% {
+                  stroke-dashoffset: 0;
+                }
+              }
+            `}</style>
+          </div>
+          {/* left down------- */}
+          <div className="absolute left-14 top-[134px]">
+            <svg
+              width="118"
+              height="43"
+              viewBox="0 0 118 43"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* স্থির ব্যাকগ্রাউন্ড লাইন - ডিজাইনের গভীরতা বাড়াতে */}
+              <path
+                d="M117.588 0.438477H72.2178L49.8714 39.0249H0.438454"
+                stroke="#1A1A1A"
+                strokeWidth="1"
+                fill="none"
+              />
+
+              {/* অনবরত দৌড়াতে থাকা উজ্জ্বল আলোর লাইন */}
+              <path
+                className="horizontal-zigzag-last"
+                d="M117.588 0.438477H72.2178L49.8714 39.0249H0.438454"
+                stroke="url(#paint_horizontal_fade_last)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                fill="none"
+              />
+
+              <defs>
+                <linearGradient
+                  id="paint_horizontal_fade_last"
+                  x1="100%"
+                  y1="0%"
+                  x2="0%"
+                  y2="0%"
+                >
+                  {/* ডান দিক থেকে অস্পষ্ট শুরু হবে */}
+                  <stop offset="0%" stopColor="#EAB1FF" stopOpacity="0" />
+                  {/* বাম দিকে যেতে যেতে গাড়ো হবে */}
+                  <stop offset="100%" stopColor="#EAB1FF" stopOpacity="1" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            <style jsx>{`
+              .horizontal-zigzag-last {
+                /* আলোর দৈর্ঘ্য এবং গ্যাপ - ৩য় সারির সাথে সামঞ্জস্য রেখে */
+                stroke-dasharray: 35, 150;
+                animation: horizontal-flow-last 2.8s linear infinite;
+              }
+
+              @keyframes horizontal-flow-last {
+                0% {
+                  stroke-dashoffset: 185;
+                }
+                100% {
+                  stroke-dashoffset: 0;
+                }
+              }
+            `}</style>
+          </div>
+          {/* div right up  */}
+          <div className="absolute top-23 left-[170px]">
+            <svg
+              width="124"
+              height="43"
+              viewBox="0 0 124 43"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* স্থির ব্যাকগ্রাউন্ড লাইন */}
+              <path
+                d="M122.775 3.229H75.2263L51.8068 41.8154H0"
+                stroke="#1A1A1A"
+                strokeWidth="1"
+                fill="none"
+              />
+
+              {/* অনবরত দৌড়াতে থাকা আলোর লাইন */}
+              <path
+                className="horizontal-zigzag-reverse-flow"
+                d="M122.775 3.229H75.2263L51.8068 41.8154H0"
+                stroke="url(#paint_horizontal_fade_rev)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                fill="none"
+              />
+
+              <defs>
+                <linearGradient
+                  id="paint_horizontal_fade_rev"
+                  x1="100%"
+                  y1="0%"
+                  x2="0%"
+                  y2="0%"
+                >
+                  {/* ডান দিকে অস্পষ্ট */}
+                  <stop offset="0%" stopColor="#EAB1FF" stopOpacity="0" />
+                  {/* বাম দিকে গাড়ো/উজ্জ্বল */}
+                  <stop offset="100%" stopColor="#EAB1FF" stopOpacity="1" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            <style jsx>{`
+              .horizontal-zigzag-reverse-flow {
+                /* আলোর সাইজ এবং গ্যাপ */
+                stroke-dasharray: 40, 160;
+                animation: horizontal-reverse-flow 3s linear infinite;
+              }
+
+              @keyframes horizontal-reverse-flow {
+                0% {
+                  /* ডান থেকে বামে ফ্লো করার জন্য পজিটিভ অফসেট */
+                  stroke-dashoffset: 0;
+                }
+                100% {
+                  stroke-dashoffset: 200;
+                }
+              }
+            `}</style>
+          </div>
+          {/* right down */}
+          <div className="absolute top-[134px] left-[177px]">
+            <svg
+              width="117"
+              height="43"
+              viewBox="0 0 117 43"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              {/* স্থির ব্যাকগ্রাউন্ড লাইন */}
+              <path
+                d="M0 0.438477H44.8316L66.9128 39.0249H115.759"
+                stroke="#1A1A1A"
+                strokeWidth="1"
+                fill="none"
+              />
+
+              {/* অনবরত দৌড়াতে থাকা আলোর লাইন */}
+              <path
+                className="horizontal-zigzag-glow-alt"
+                d="M0 0.438477H44.8316L66.9128 39.0249H115.759"
+                stroke="url(#paint_horizontal_fade_alt)"
+                strokeWidth="2"
+                strokeLinecap="round"
+                fill="none"
+              />
+
+              <defs>
+                <linearGradient
+                  id="paint_horizontal_fade_alt"
+                  x1="0%"
+                  y1="0%"
+                  x2="100%"
+                  y2="0%"
+                >
+                  {/* বাম দিকে অস্পষ্ট শুরু হবে */}
+                  <stop offset="0%" stopColor="#EAB1FF" stopOpacity="0" />
+                  {/* ডান দিকে যেতে যেতে উজ্জ্বল হবে */}
+                  <stop offset="100%" stopColor="#EAB1FF" stopOpacity="1" />
+                </linearGradient>
+              </defs>
+            </svg>
+
+            <style jsx>{`
+              .horizontal-zigzag-glow-alt {
+                /* আলোর দৈর্ঘ্য এবং গ্যাপ */
+                stroke-dasharray: 40, 150;
+                animation: flow-right 2.8s linear infinite;
+              }
+
+              @keyframes flow-right {
+                0% {
+                  stroke-dashoffset: 190;
+                }
+                100% {
+                  stroke-dashoffset: 0;
+                }
+              }
+            `}</style>
+          </div>
+          {/* btn */}
           <div
-            className="flex items-center justify-center overflow-hidden backdrop-blur-[4px]"
+            className="flex z-55  absolute top-[100px] right-1/2 items-center justify-center overflow-hidden backdrop-blur-[4px]"
             style={{
               width: "64.9px",
               height: "64.9px",
-              borderRadius: "50%", // পারফেক্ট সার্কেলের জন্য
-              background: "rgba(181, 59, 226, 0.25)", // হালকা বেগুনি ব্যাকগ্রাউন্ড যা ছবির সাথে মিলবে
+              borderRadius: "50%",
+              background: "rgba(181, 59, 226, 0.25)",
               border: "1.32px ",
-              // বর্ডার ইমেজ সোর্স সরাসরি স্টাইলে এভাবে দিলে অনেক সময় সমস্যা করে, তাই বর্ডার কালার কন্ট্রোল করা হয়েছে
               borderColor: "rgba(181, 59, 226, 0.2)",
               boxShadow: `
       0px 28.06px 21.05px -14.03px rgba(181, 59, 226, 0.1), 
@@ -375,8 +743,130 @@ const SolveRealProblem3rdrow = () => {
     `,
             }}
           >
-            {/* আপনার আইকনটি এখানে */}
             <SecureImage className="w-[24px] h-[24px]" />
+          </div>
+          {/* down */}
+          <div>
+            {/* left */}
+            <div className="absolute left-32.5 top-32 z-10">
+              <svg
+                width="43"
+                height="111"
+                viewBox="0 0 43 111"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* স্থির ব্যাকগ্রাউন্ড লাইন */}
+                <path
+                  d="M41.8153 0L41.8153 54.3413L3.22892 81.1064L3.22892 110.314"
+                  stroke="#1A1A1A"
+                  strokeWidth="1"
+                  fill="none"
+                />
+
+                {/* অনবরত দৌড়াতে থাকা আলোর লাইন */}
+                <path
+                  className="continuous-zigzag-down"
+                  d="M41.8153 0L41.8153 54.3413L3.22892 81.1064L3.22892 110.314"
+                  stroke="url(#paint_linear_zigzag_fade_3)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+
+                <defs>
+                  <linearGradient
+                    id="paint_linear_zigzag_fade_3"
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="1"
+                  >
+                    {/* ওপরের অংশ অস্পষ্ট */}
+                    <stop offset="0%" stopColor="#EAB1FF" stopOpacity="0" />
+                    {/* নিচে নামলে গাড়ো হবে */}
+                    <stop offset="100%" stopColor="#EAB1FF" stopOpacity="1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <style jsx>{`
+                .continuous-zigzag-down {
+                  /* আলোর সাইজ ৩০ এবং গ্যাপ ১২০ পিক্সেল */
+                  stroke-dasharray: 30, 120;
+                  animation: zigzag-flow-down 2.2s linear infinite;
+                }
+
+                @keyframes zigzag-flow-down {
+                  0% {
+                    stroke-dashoffset: 150;
+                  }
+                  100% {
+                    stroke-dashoffset: 0;
+                  }
+                }
+              `}</style>
+            </div>
+            {/* right */}
+            <div className="absolute top-32 left-43">
+              <svg
+                width="43"
+                height="112"
+                viewBox="0 0 43 112"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* স্থির ব্যাকগ্রাউন্ড লাইন */}
+                <path
+                  d="M0.438477 0L0.438479 54.3413L39.0249 81.1064L39.0249 111.314"
+                  stroke="#1A1A1A"
+                  strokeWidth="1"
+                  fill="none"
+                />
+
+                {/* অনবরত দৌড়াতে থাকা আলোর লাইন */}
+                <path
+                  className="continuous-zigzag-left-down"
+                  d="M0.438477 0L0.438479 54.3413L39.0249 81.1064L39.0249 111.314"
+                  stroke="url(#paint_linear_zigzag_left_fade)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  fill="none"
+                />
+
+                <defs>
+                  <linearGradient
+                    id="paint_linear_zigzag_left_fade"
+                    x1="0"
+                    y1="0"
+                    x2="0"
+                    y2="1"
+                  >
+                    {/* ওপরের অংশ অস্পষ্ট */}
+                    <stop offset="0%" stopColor="#EAB1FF" stopOpacity="0" />
+                    {/* নিচে নামলে গাড়ো হবে */}
+                    <stop offset="100%" stopColor="#EAB1FF" stopOpacity="1" />
+                  </linearGradient>
+                </defs>
+              </svg>
+
+              <style jsx>{`
+                .continuous-zigzag-left-down {
+                  /* আলোর সাইজ এবং গ্যাপ */
+                  stroke-dasharray: 35, 130;
+                  animation: zigzag-left-flow 2.4s linear infinite;
+                }
+
+                @keyframes zigzag-left-flow {
+                  0% {
+                    stroke-dashoffset: 165;
+                  }
+                  100% {
+                    stroke-dashoffset: 0;
+                  }
+                }
+              `}</style>
+            </div>
           </div>
         </div>
       </div>
@@ -385,3 +875,94 @@ const SolveRealProblem3rdrow = () => {
 };
 
 export default SolveRealProblem3rdrow;
+
+// <div>
+//           <motion.div
+//           // ফ্লোটিং এনিমেশন
+//           animate={{
+//             y: [0, -6, 0],
+//           }}
+//           transition={{
+//             duration: 3,
+//             repeat: Infinity,
+//             ease: "easeInOut",
+//           }}
+//           className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+//           style={{
+//             width: "40.34px",
+//             height: "40.34px",
+//             top: "535.98px",
+//             left: "334.66px",
+//             borderRadius: "50%",
+//             background: "#16021E",
+//           }}
+//         >
+//           <Whitecross></Whitecross>
+//         </motion.div>{" "}
+//         <motion.div
+//           // ফ্লোটিং এনিমেশন
+//           animate={{
+//             y: [0, -6, 0],
+//           }}
+//           transition={{
+//             duration: 3,
+//             repeat: Infinity,
+//             ease: "easeInOut",
+//           }}
+//           className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+//           style={{
+//             width: "40.34px",
+//             height: "40.34px",
+//             top: "535.98px",
+//             left: "334.66px",
+//             borderRadius: "50%",
+//             background: "#16021E",
+//           }}
+//         >
+//           <WhiteRight></WhiteRight>
+//         </motion.div>{" "}
+//         <motion.div
+//           // ফ্লোটিং এনিমেশন
+//           animate={{
+//             y: [0, -6, 0],
+//           }}
+//           transition={{
+//             duration: 3,
+//             repeat: Infinity,
+//             ease: "easeInOut",
+//           }}
+//           className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+//           style={{
+//             width: "40.34px",
+//             height: "40.34px",
+//             top: "535.98px",
+//             left: "334.66px",
+//             borderRadius: "50%",
+//             background: "#16021E",
+//           }}
+//         >
+//           <Blue></Blue>
+//         </motion.div>{" "}
+//         <motion.div
+//           // ফ্লোটিং এনিমেশন
+//           animate={{
+//             y: [0, -6, 0],
+//           }}
+//           transition={{
+//             duration: 3,
+//             repeat: Infinity,
+//             ease: "easeInOut",
+//           }}
+//           className=" flex items-center justify-center overflow-hidden backdrop-blur-[2px]"
+//           style={{
+//             width: "40.34px",
+//             height: "40.34px",
+//             top: "535.98px",
+//             left: "334.66px",
+//             borderRadius: "50%",
+//             background: "#16021E",
+//           }}
+//         >
+//           <Red></Red>
+//         </motion.div>
+// </div>
