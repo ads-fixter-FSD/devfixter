@@ -15,11 +15,12 @@ import vendaike from "../../../public/home/solveRealProblem/blue.png";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SolveRealProblem3rdrow from "./SolveRealProblem3rdrow";
+import { fadeDown, fadeUp } from "../../../utils/animation";
 
 const SolveRealProblemCard = () => {
   return (
     <div>
-      <div className="flex items-center gap-5">
+      <div className="md:flex items-center gap-5">
         <div>
           <div className="h-[704px] w-[413px] p-[30px] bg-[#000311] border border-[#FFFFFF12] rounded-[30px] shadow-[inset_0px_34px_154px_0px_#FFFFFF12]">
             <div className="p-[1px] rounded-[30px] bg-[linear-gradient(180deg,_#00AEFF_0%,_#000000_87.68%)] overflow-hidden relative group">
@@ -59,12 +60,17 @@ const SolveRealProblemCard = () => {
                   </div>
                 </div>
                 <div>
-                  <p className="mt-[15px] text-[#949494] text-[12px]">
+                  <motion.p
+                    initial="hidden"
+                    whileInView="visible"
+                    custom={0.2}
+                    viewport={{ once: false, amount: 0.3 }}
+                    variants={fadeUp} className="mt-[15px] text-[#949494] text-[12px]">
                     <span className="text-[12px] text-white mr-[8px]">
                       Subject:
                     </span>
                     Discover the power of content generation
-                  </p>
+                  </motion.p>
                   <div className="relative">
                     <Image
                       src={pen}
@@ -73,15 +79,27 @@ const SolveRealProblemCard = () => {
                       height={16}
                       className="absolute left-[115px] bottom-2"
                     />
-                    <p className="mt-[6px] text-[12px] text-white ">
+                    <motion.p
+                    initial="hidden"
+                    whileInView="visible"
+                    custom={0.2}
+                    viewport={{ once: false, amount: 0.3 }}
+                    variants={fadeUp}className="mt-[6px] text-[12px] text-white ">
                       Hi [Recipient’s Name]
-                    </p>
+                    </motion.p>
                   </div>
-                  <p className="text-[12px] mt-[14px] text-[#949494]">
+                  <motion.p
+                    initial="hidden"
+                    whileInView="visible"
+                    custom={0.2}
+                    viewport={{ once: false, amount: 0.3 }}
+                    variants={fadeUp}
+                    className="text-[12px] mt-[14px] text-[#949494]"
+                  >
                     Create, optimize, and publish smarter content 10x faster,
                     with predictive analytics and generative AI. Create blogs,
                     pages, and FAQs with one-click prompts.
-                  </p>
+                  </motion.p>
                   <div className="relative">
                     <div className="mt-[25px]">
                       <button className="w-[163.7px] absolute z-20 left-[90px] bottom-[41px] h-[46px] px-[18.4px] py-[14.95px] rounded-[13.8px] bg-[#B53BE2] text-white text-[18.4px] font-medium leading-[140%] text-center border-transparent shadow-[inset_0px_-4.6px_21.85px_0px_#EAB1FF] flex items-center justify-center gap-[4.5px]">
@@ -154,7 +172,14 @@ const SolveRealProblemCard = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              custom={0.2}
+              viewport={{ once: false, amount: 0.3 }}
+              variants={fadeUp}
+              className="px-7.5"
+            >
               <p className="title-s mt-[43px] text-white font-medium">
                 Custom Web Development
               </p>
@@ -164,7 +189,7 @@ const SolveRealProblemCard = () => {
                 develop high-performance, SEO-friendly solutions that deliver
                 real results.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="relative">
@@ -245,14 +270,22 @@ const SolveRealProblemCard = () => {
                     </div>
                   </div>
                 </div>
-
-                <p className="text-white font-medium title-s mt-5">
-                  SaaS Application Development
-                </p>
-                <p className="text-[#82869A] text-base mt-3">
-                  Build powerful SaaS platforms with secure and scalable
-                  architecture.
-                </p>
+                <motion.div
+                  initial="hidden"
+                  whileInView="visible"
+                  custom={0.2}
+                  viewport={{ once: false, amount: 0.3 }}
+                  variants={fadeDown}
+                  className="px-7.5"
+                >
+                  <p className="text-white font-medium title-s mt-5">
+                    SaaS Application Development
+                  </p>
+                  <p className="text-[#82869A] text-base mt-3">
+                    Build powerful SaaS platforms with secure and scalable
+                    architecture.
+                  </p>
+                </motion.div>
               </div>
             </div>
             {/* 2nd div */}
@@ -852,14 +885,21 @@ const SolveRealProblemCard = () => {
                 />
               </div>
 
-              <div className="px-7.5">
+              <motion.div
+                initial="hidden"
+                whileInView="visible"
+                custom={0.2}
+                viewport={{ once: false, amount: 0.3 }}
+                variants={fadeDown}
+                className="px-7.5"
+              >
                 <p className="text-white font-medium title-s mt-6">
                   API Development & Integration
                 </p>
                 <p className="text-[#82869A] text-base mt-3">
                   Seamless integrations with third-party tools and custom APIs.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
 
@@ -900,7 +940,6 @@ const SolveRealProblemCard = () => {
          */}
         <div>
           <SolveRealProblem3rdrow></SolveRealProblem3rdrow>
- 
         </div>
       </div>
     </div>
