@@ -1,4 +1,5 @@
 import OurStory from '@/components/about-us/OurStory'
+import OurTeam from '@/components/about-us/OurTeam'
 import WhatWeDo from '@/components/about-us/WhatWeDo'
 import GhostButton from '@/components/button/GhostButton'
 import GlassButton from '@/components/button/GlassButton'
@@ -47,6 +48,8 @@ export default function page() {
     <OurStory></OurStory>
     <HowWeBuild />
     <WhatWeDo></WhatWeDo>
+
+    <OurTeam></OurTeam>
     </div>
   )
 }
