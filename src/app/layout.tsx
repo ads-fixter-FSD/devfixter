@@ -34,13 +34,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Navbar />
         {/* Added top padding to account for fixed navbar */}
-<<<<<<< HEAD
-        <main className="flex-grow    mx-auto w-full">
-          {children}
-        </main>
-=======
         <main className="flex-grow  pb-12  mx-auto w-full">{children}</main>
->>>>>>> d64a76d (dev fixter icon and interatins section update)
         <Footer />
       </body>
     </html>
