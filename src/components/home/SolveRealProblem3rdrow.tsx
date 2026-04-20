@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import innerdiv from "../../../public/home/solveRealProblem/Innerbtn.png";
 import { fadeDown, fadeUp } from "../../../utils/animation";
 
 import React from "react";
@@ -16,10 +15,7 @@ import {
 } from "../svg";
 
 import { AiOutlinePlus } from "react-icons/ai";
-import Image from "next/image";
-import { div } from "framer-motion/client";
 import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri";
-import { ChevronLeft } from "lucide-react";
 
 const SolveRealProblem3rdrow = () => {
   return (
@@ -686,7 +682,7 @@ const SolveRealProblem3rdrow = () => {
           </div>
           {/* right arrow  */}
 
-          <div className="absolute left-84 top-[165px]">
+          <div className="absolute left-85 top-[165px]">
             <RiArrowDropRightLine
               size={15}
               className="thin-arrow"
@@ -882,7 +878,7 @@ const SolveRealProblem3rdrow = () => {
             `}</style>
           </div>
           {/* right down */}
-          <div className="absolute top-[134px] left-[224px]">
+          <div className="absolute top-[133px] left-[231px]">
             <svg
               width="117"
               height="43"
