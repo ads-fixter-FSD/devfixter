@@ -203,7 +203,7 @@ const DevFixterStats = () => {
           trigger: containerRef.current,
           start: "top 80%",
         },
-      });
+      });     
 
       // Subtle pulse for the center logo
       gsap.to(".center-logo", {

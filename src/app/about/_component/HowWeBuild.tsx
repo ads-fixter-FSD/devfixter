@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -60,11 +61,10 @@ export default function HowWeBuild() {
         },
       });
 
-      // EACH ICON ANIMATION SYSTEM
+      // ICON ANIMATION
       circleRefs.current.forEach((circle, index) => {
         if (!circle) return;
 
-        // 1st icon always active → no scroll trigger needed
         if (index === 0) {
           activate(circle);
           return;
@@ -79,7 +79,7 @@ export default function HowWeBuild() {
           onLeaveBack: () => deactivate(circle),
         });
       });
-      // ACTIVE STATE FUNCTION
+
       function activate(circle: HTMLElement) {
         gsap.to(circle, {
           backgroundColor: "#B53BE2",
@@ -89,7 +89,7 @@ export default function HowWeBuild() {
           duration: 0.3,
         });
       }
-      // INACTIVE STATE FUNCTION
+
       function deactivate(circle: HTMLElement) {
         gsap.to(circle, {
           backgroundColor: "#000000",
@@ -106,10 +106,10 @@ export default function HowWeBuild() {
   return (
     <section
       ref={containerRef}
-      className="bg-black text-white  px-6 overflow-hidden mt-20"
+      className="bg-black text-white px-6 overflow-hidden mt-20"
     >
       {/* Header */}
-      <div className="max-w-[440px] mx-auto text-center mb-20 ">
+      <div className="max-w-[440px] mx-auto text-center mb-20">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -127,18 +127,21 @@ export default function HowWeBuild() {
             performance.
           </p>
         </motion.div>
-        <PrimaryButton className="mt-[68px]">Start Your Project</PrimaryButton>
+        <PrimaryButton className="mt-[68px]">
+          Start Your Project
+        </PrimaryButton>
       </div>
 
       <div className="relative max-w-6xl mx-auto">
-        {/* Line */}
-        <div className="absolute left-[28px] md:left-1/2 -translate-x-1/2 top-[32px] bottom-[32px] w-[1px] bg-white/10">
+        {/*  FIXED LINE */}
+        <div className="absolute left-[28px] md:left-1/2 -translate-x-1/2 top-[32px] bottom-[72px] w-[1px] bg-white/10">
           <div
             ref={lineRef}
             className="w-full h-full origin-top"
             style={{
               transform: "scaleY(0)",
-              background: "linear-gradient(180deg, #B53BE2 0%, #EAB1FF 100%)",
+              background:
+                "linear-gradient(180deg, #B53BE2 0%, #EAB1FF 100%)",
             }}
           />
         </div>
@@ -152,7 +155,9 @@ export default function HowWeBuild() {
                 stepRefs.current[idx] = el;
               }}
               className={`relative flex items-start w-full md:justify-center ${
-                step.align === "right" ? "md:flex-row" : "md:flex-row-reverse"
+                step.align === "right"
+                  ? "md:flex-row"
+                  : "md:flex-row-reverse"
               } flex-row`}
             >
               <div className="flex-1 hidden md:block"></div>
@@ -189,19 +194,18 @@ export default function HowWeBuild() {
               >
                 <div
                   className={`max-w-[440px] pt-2 
-      /* Mobile: Default left alignment and margin */
-      ml-[20px] text-left 
-      
-      /* Desktop (md): Reset mobile margins and apply logic-based spacing */
-      md:ml-0 
-      ${
-        step.align === "left"
-          ? "md:mr-[30px] md:text-right"
-          : "md:ml-[30px] md:text-left"
-      }`}
+                  ml-[20px] text-left 
+                  md:ml-0 
+                  ${
+                    step.align === "left"
+                      ? "md:mr-[30px] md:text-right"
+                      : "md:ml-[30px] md:text-left"
+                  }`}
                 >
                   <h3 className="title-sm mb-4">{step.title}</h3>
-                  <p className="text-base text-gray-400">{step.description}</p>
+                  <p className="text-base text-gray-400">
+                    {step.description}
+                  </p>
                 </div>
               </motion.div>
             </div>
