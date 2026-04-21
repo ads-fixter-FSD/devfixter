@@ -16,6 +16,8 @@ import {
 
 import { AiOutlinePlus } from "react-icons/ai";
 import { RiArrowDropLeftLine, RiArrowDropRightLine } from "react-icons/ri";
+import PrimaryButton from "../button/PrimaryButton";
+import { IoMdArrowForward } from "react-icons/io";
 
 const SolveRealProblem3rdrow = () => {
   return (
@@ -1095,6 +1097,7 @@ const SolveRealProblem3rdrow = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };
