@@ -15,7 +15,7 @@ const Footer = () => {
     <footer className="w-full pb-[36px] bg-black ">
       <ContactCTA />
       {/* Outer Container (1280px) */}
-      <div className="custom-container px-5 mx:px-0">
+      <div className="custom-container px-5 md:px-0">
         {/* Inner Wrapper (Width: 1160px) */}
         <div className="flex flex-col lg:flex-row justify-between items-start gap-10 max-w-[1160px]">
           {/* Left Side (Width: 305px) */}
@@ -35,18 +35,7 @@ const Footer = () => {
             {/* Newsletter */}
             <div>
               <h4 className="title-s mb-4 text-foreground">Newsletter</h4>
-              {/* <div className="flex items-center gap-2">
-                <div className="flex gap-2 p-1 border border-border rounded-[14px] bg-card-dark focus-within:border-primary transition-all">
-                  <input
-                    type="email"
-                    placeholder="Email"
-                    className="bg-transparent max-h-[44px] border-none outline-none px-4 py-[11px] w-full text-base text-foreground"
-                  />
-                </div>
-                <PrimaryButton className="max-h-[44px] px-4 py-[11px]">
-                  Subscribe
-                </PrimaryButton>
-              </div> */}
+          
               <div className="flex items-center gap-1">
                 {/* input filed */}
                 <div className="flex items-center h-[44px] border border-[#191C28] rounded-[12px] focus-within:border-[#B53BE2] transition-all px-4 ">
@@ -64,7 +53,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Right Side (Width: 727px) */}
+       
           {/* Right Side (Width: 727px) */}
           <div className="w-full lg:w-[727px] grid grid-cols-2 lg:flex lg:flex-nowrap md:gap-[120px] gap-x-10 gap-y-10">
             {/* Pages Col 1 - Content based width */}
