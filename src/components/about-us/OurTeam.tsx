@@ -1,5 +1,4 @@
 
-
 "use client";
 
 import React from "react";
@@ -50,7 +49,7 @@ export default function OurTeam() {
             slidesPerView={"auto"}
             loop={true}
             autoplay={{
-              delay: 2500,
+              delay: 2000,
               disableOnInteraction: false,
             }}
             coverflowEffect={{
@@ -63,20 +62,19 @@ export default function OurTeam() {
             modules={[EffectCoverflow, Pagination, Autoplay]}
             className="team-swiper"
           >
-            {TEAM_MEMBERS.map((member) => (
+           
+            {[...TEAM_MEMBERS, ...TEAM_MEMBERS].map((member, index) => (
               <SwiperSlide
-                key={member.id}
-                className="max-w-[300px] md:max-w-[320px] py-6"
+                key={`${member.id}-${index}`}
+                className="max-w-[300px] md:max-w-[320px] py-4"
               >
                 {({ isActive }) => (
                   <div
                     className={`relative rounded-[6px] overflow-hidden transition-all duration-500 h-[420px] shadow-xl border-2 border-white 
                     ${isActive ? "bg-[#1E232B] scale-105" : "bg-white"}`}
                   >
-                   
-
                     {isActive ? (
-                      /* মাঝখানের কার্ড (Active Card) */
+                      
                       <div className="flex flex-col items-center justify-center h-full p-8 text-center">
                         <div className="w-32 h-32 relative rounded-full border-4 border-gray-700 overflow-hidden mb-6">
                           <Image
@@ -95,7 +93,6 @@ export default function OurTeam() {
                         <p className="text-gray-400 text-sm mb-6 line-clamp-3">
                           {member.description}
                         </p>
-                        {/* Social Icons Placeholder */}
                         <div className="flex gap-3">
                           {[
                             FaFacebookF,
@@ -113,7 +110,7 @@ export default function OurTeam() {
                         </div>
                       </div>
                     ) : (
-                      /* পাশের কার্ডগুলো (Only Image) */
+                  
                       <Image
                         src={member.image}
                         alt={member.name}
@@ -147,7 +144,3 @@ export default function OurTeam() {
     </div>
   );
 }
-
-
-
-

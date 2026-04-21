@@ -57,12 +57,5 @@ export const TEAM_MEMBERS = [
     description: "Creative developer with a strong background in JavaScript frameworks and responsive web design.",
     socials: { facebook: "#", instagram: "#", twitter: "#", linkedin: "#" }
   },
-  // {
-  //   id: 1,
-  //   name: "MD Maniruzzaman",
-  //   designation: "Sr. Full Stack Developer",
-  //   image: "/team/member1.png", 
-  //   description: "Expert in architecting scalable web applications and leading technical teams to deliver high-quality products.",
-  //   socials: { facebook: "#", instagram: "#", twitter: "#", linkedin: "#" }
-  // },
+
 ];
