@@ -28,7 +28,6 @@ const SolveRealProblems = () => {
                 <foreignObject x="-15.9999" y="-16" width="52" height="52">
                   <div
                     className=""
-                    xmlns="http://www.w3.org/1999/xhtml"
                     style={{
                       backdropFilter: "blur(8px)",
                       height: "100%",
