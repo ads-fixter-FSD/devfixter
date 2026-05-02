@@ -39,7 +39,7 @@ const ContactCTA = () => {
         </p>
 
         {/* Primary Button */}
-        <PrimaryButton href="/contact" icon={IoMdArrowForward}>
+        <PrimaryButton href="/contact" icon={<IoMdArrowForward/>}>
           Contact Us
         </PrimaryButton>
       </div>

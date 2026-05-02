@@ -1,66 +1,131 @@
 "use client";
 
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import React from "react";
-import GhostButton from "./button/GhostButton";
+import Image from "next/image";
+import { usePathname } from "next/navigation"; 
+import { motion, AnimatePresence } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
-import { HiMenu } from "react-icons/hi";
+import { HiMenu, HiX } from "react-icons/hi";
+import GhostButton from "./button/GhostButton";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About Us", href: "/about" },
+    { name: "Features", href: "#features" },
+    { name: "Company", href: "#company" },
+    { name: "Blog", href: "#blog" },
+    { name: "Pricing", href: "#pricing" },
+  ];
+
   return (
-    <nav className="w-full bg-[#0E0E0F] h-[80px] flex items-center justify-center border-b border-white/5 z-50 fixed top-0">
-      <div className="w-full max-w-[1280px] px-6 lg:px-10 flex items-center justify-between">
+    <header className="w-full fixed top-0 left-0 flex justify-center z-[100] transition-all duration-300">
+      <nav 
+        className={`w-full max-w-[1440px] h-[80px] flex items-center justify-between transition-all duration-300 
+          px-5 md:px-[80px] py-[16px] 
+          ${
+            isScrolled 
+              ? "bg-[#0E0E0F]/40 backdrop-blur-xl  " 
+              : "bg-transparent" 
+          }`}
+      >
         {/* Logo Section */}
-        <Link href="/" className="flex items-center gap-[10px] group">
-          <div className="w-[32px] h-[32px] bg-[#B53BE2] rounded-[10px] flex items-center justify-center shadow-[0px_4px_10px_rgba(181,59,226,0.5)]">
-            <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Geometric 'd' representation */}
-              <rect x="2" y="7" width="6" height="6" rx="1.5" fill="white" />
-              <rect x="9" y="3" width="3" height="10" rx="1" fill="white" />
-              <rect x="2" y="3" width="3" height="3" rx="1" fill="white" />
-            </svg>
-          </div>
-          <span className="font-semibold text-white tracking-tight text-[22px] lowercase font-sans">
-            devfixter
-          </span>
+        <Link href="/" className="relative w-[125px] h-[23px] flex items-center shrink-0">
+          <Image 
+            src="/logo1.png" 
+            alt="logo" 
+            fill 
+            className="object-contain" 
+            priority 
+          />
         </Link>
 
-        {/* Center Links */}
-        <div className="hidden md:flex items-center space-x-10">
-          <Link href="/" className="text-white text-[15px] font-medium transition-opacity hover:opacity-80">
-            Home
-          </Link>
-          <Link href="#features" className="text-[#B5BDE2] text-[15px] font-medium transition-colors hover:text-white">
-            Features
-          </Link>
-          <Link href="#company" className="text-[#B5BDE2] text-[15px] font-medium transition-colors hover:text-white">
-            Company
-          </Link>
-          <Link href="#blog" className="text-[#B5BDE2] text-[15px] font-medium transition-colors hover:text-white">
-            Blog
-          </Link>
-          <Link href="#pricing" className="text-[#B5BDE2] text-[15px] font-medium transition-colors hover:text-white">
-            Pricing
-          </Link>
+        {/* Main Nav Items (Center) */}
+        <div className="hidden md:flex items-center gap-[30px] absolute left-1/2 -translate-x-1/2">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={`text-[15px] font-medium transition-all duration-300 hover:text-white whitespace-nowrap ${
+                  isActive ? "text-white" : "text-[#B5BDE2]"
+                }`}
+              >
+                {link.name}
+              </Link>
+            );
+          })}
         </div>
 
-        {/* Right CTA */}
-        <div className="hidden md:block">
-          <GhostButton icon={FiArrowRight} onClick={() => console.log('Contact Now Clicked')}>
+        {/* Contact Now Button (Right) */}
+        <div className="hidden md:block shrink-0">
+          <GhostButton 
+            icon={FiArrowRight} 
+            className="!w-[147px] !h-[48px] !rounded-[12px] !text-[15px] font-medium"
+            onClick={() => console.log("Contact Clicked")}
+          >
             Contact Now
           </GhostButton>
         </div>
 
-        {/* Mobile menu button */}
+        {/* Mobile Menu Icon */}
         <div className="md:hidden flex items-center">
-          <button className="text-[#B5BDE2] hover:text-white p-2">
-            <HiMenu className="h-6 w-6" />
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-white text-3xl transition-all"
+          >
+            {isOpen ? <HiX /> : <HiMenu />}
           </button>
         </div>
-      </div>
-    </nav>
+
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="absolute top-[80px] left-0 w-full bg-[#0E0E0F] border-b border-white/10 flex flex-col items-center py-10 gap-6 md:hidden z-40 overflow-hidden"
+            >
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-lg font-medium transition-colors ${
+                    pathname === link.href ? "text-white" : "text-[#B5BDE2]"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <GhostButton 
+                  icon={FiArrowRight}
+                  className="!w-[200px]"
+                  onClick={() => setIsOpen(false)}
+              >
+                Contact Now
+              </GhostButton>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+    </header>
   );
 };
 
 export default Navbar;
-

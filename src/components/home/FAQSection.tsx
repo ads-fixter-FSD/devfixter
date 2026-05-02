@@ -42,9 +42,9 @@ const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="w-full flex justify-center mb-10 md:mb-[120px] ">
+    <section className="w-full flex justify-center">
       {/* Main Container - Width: 846px */}
-      <div className="w-full max-w-[846px] flex flex-col gap-[80px] px-5 md:px-0">
+      <div className="w-full max-w-[846px] flex flex-col gap-[80px] px-5 md:px-0 py-20">
         {/* Header Section */}
         <motion.div
           initial="hidden"
@@ -55,7 +55,7 @@ const FAQSection = () => {
           className="flex flex-col items-center text-center gap-6 "
         >
           <Badge>FAQs</Badge>
-          <h2 className="title-xl">
+          <h2 className="title-lg">
             Everything You <br /> Need to Know
           </h2>
           <p className="body-m ">

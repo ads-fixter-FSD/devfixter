@@ -36,3 +36,16 @@ export const fadeRight = {
     },
   }),
 };
+
+export const fadeDown = {
+  hidden: { opacity: 0, y: -40 },
+  visible: (delay: number = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay,
+      ease: [0.25, 0.1, 0.25, 1] as const,
+    },
+  }),
+};

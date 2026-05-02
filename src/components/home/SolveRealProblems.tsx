@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import SolveRealProblemCard from "./SolveRealProblemCard";
+import PrimaryButton from "../button/PrimaryButton";
+import { IoMdArrowForward } from "react-icons/io";
 
 const SolveRealProblems = () => {
   return (
@@ -124,9 +126,14 @@ const SolveRealProblems = () => {
           </motion.p>
         </div>
         <div className="mt-11 md:mt-15">
-           <SolveRealProblemCard />
+          <SolveRealProblemCard />
         </div>
       </div>
+      <div className="text-center mt-[60px]">
+              <PrimaryButton href="/contact" icon={<IoMdArrowForward />}>
+        Contact now
+      </PrimaryButton>
+</div>
     </section>
   );
 };
