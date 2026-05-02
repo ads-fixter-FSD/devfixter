@@ -83,7 +83,7 @@ export default function KeyBenefits() {
           >
             <div
               className="relative flex items-center justify-center rounded-[4px]"
-              style={{ width: "23px", height: "23px", background: "#581372" }}
+              style={{ width: "23px", height: "23px",  }}
             >
               <div style={{ position: "relative", width: "12.6px", height: "14px" }}>
                 <Image src="/logo.png" alt="DevFixter Logo" fill className="object-contain" />
@@ -95,12 +95,13 @@ export default function KeyBenefits() {
           <div className="grid grid-cols-1 sm:grid-cols-2 relative z-0">
             {/* Top Left */}
             <motion.div
+            
             variants={fadeLeft}
             initial='hidden'
             whileInView={'visible'}
             custom={0.4}
             viewport={{once:false}} 
-            className="flex flex-col items-center text-center px-8 py-10 sm:py-14 h-auto min-h-[200px] sm:min-h-[246px] justify-center relative sm:border-r border-b border-transparent bg-transparent">
+            className="flex flex-col items-center text-center px-8 py-10 sm:py-14 h-auto min-h-[200px] sm:min-h-[246px] justify-center relative sm:border-r border-b border-transparent bg-[radial-gradient(circle_at_bottom_right,_#B53BE2B2_-200%,_transparent_70%)]  ">
               <Image src="/home/keyBenefits/icon1.png" width={32} height={32} alt="Save Time & Effort" className="mb-6 object-contain" />
               <h3 className="title-sm text-white mb-3">Save Time & Effort</h3>
               <p className="text-base text-[var(--accent)] max-w-[340px]">
@@ -142,7 +143,7 @@ export default function KeyBenefits() {
             initial='hidden'
             whileInView={'visible'}
             custom={0.7}
-            viewport={{once:false}}  className="flex flex-col items-center text-center px-8 py-10 sm:py-14 h-auto min-h-[200px] sm:min-h-[246px] justify-center relative bg-transparent">
+            viewport={{once:false}}  className="flex flex-col items-center text-center px-8 py-10 sm:py-14 h-auto min-h-[200px] sm:min-h-[246px] justify-center relative bg-[radial-gradient(circle_at_top_left,_#B53BE2B2_-200%,_transparent_70%)]">
               <Image src="/home/keyBenefits/icon4.png" width={32} height={32} alt="Work From Anywhere" className="mb-6 object-contain" />
               <h3 className="title-sm text-white mb-3">Work From Anywhere</h3>
               <p className="text-base text-[var(--accent)] max-w-[340px]">
