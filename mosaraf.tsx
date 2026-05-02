@@ -1,5 +1,5 @@
+import Badge from "@/components/shared/Badge";
 import Image from "next/image";
-import Badge from "../shared/Badge";
 const BANNER_IMAGE = "/images/banner.svg";
 
 export default function Banner() {
